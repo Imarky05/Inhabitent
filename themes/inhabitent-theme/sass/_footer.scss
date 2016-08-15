@@ -1,0 +1,70 @@
+// footer
+
+.site-footer {
+	height: 355px;
+	display: flex;
+	justify-content: center;
+	background-image: url(../../images/dark-wood.png);
+}
+
+.footer-container {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+.footer-info-wrapper {
+	width: $fixed__width;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.contact-info, .business-info, .logo-info {
+	margin-top: 30px;
+}
+
+.contact-info{
+	flex: 1 0 25%;
+}
+.business-info{
+	flex: 1 0 25%;
+}
+.logo-info {
+	flex: 2 0 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+div.logo-info a img {
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+	width: 280px;
+}
+
+div.footer-info-wrapper div h3 {
+	color: #d99054;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+
+}
+
+div.footer-info-wrapper div p {
+	color: white;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+}
+
+div.copyright p {
+	font-family: $font__accent;
+	color: white;
+	text-transform: uppercase;
+}
+
+.contact-info p i {
+	font-size: 1.2rem;
+	margin-right: 5px;
+}
