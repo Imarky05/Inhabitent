@@ -2,3 +2,37 @@
 # Product
 --------------------------------------------------------------*/
 
+.products-container {
+	display: flex;
+	width: $fixed__width;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.type-product {
+	width: (($fixed__width/4)-25px);
+	flex: 0 1 23%;
+	overflow: hidden;
+}
+
+.product-img-wrapper {
+	width: 250px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a img {
+		max-width: initial;
+	}
+}
+
+.product-title-price {
+	padding: 20px 15px;
+	border: solid 1px rgba(0,0,0,0.1);
+	border-top-width: 5px;
+}
+
+.product-title {
+	font-family: $font__main;
+	margin: 0;
+}

@@ -13,6 +13,8 @@ get_header(); ?>
 			<header class="page-header-product">
 				<h1>Shop Stuff</h1>
 			</header><!-- .page-header -->
+			
+			<div class="products-container">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -21,16 +23,18 @@ get_header(); ?>
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="product-img-wrapper">
 								<a href="#">
-									<?php the_post_thumbnail( 'medium' ); ?>
+									<?php the_post_thumbnail( array('auto', 250) ); ?>
 								</a>
 							</div>
 						<?php endif; ?>
 						<div class="product-title-price">
-						<?php the_title( sprintf( '<h2 class="product-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+						<?php the_title( sprintf( '<p class="product-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 						</div>
 				</article><!-- #post-## -->
 
 			<?php endwhile; ?>
+			
+			</div>
 
 		<?php else : ?>
 
