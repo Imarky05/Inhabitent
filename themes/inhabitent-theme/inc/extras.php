@@ -62,3 +62,18 @@ function inhabitent_modify_product_archive_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'inhabitent_modify_product_archive_query' );
+
+/**
+* User changeable background image of about page
+*/
+
+function inhabitent_about_styles_method() {
+
+	        $color = get_theme_mod( 'red' ); //E.g. #FF0000
+	        $custom_css = "
+	                .about-hero-banner{
+	                        background: {$color};
+	                }";
+	        wp_add_inline_style( 'custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_about_styles_method' );

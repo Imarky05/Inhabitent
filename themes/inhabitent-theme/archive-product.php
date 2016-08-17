@@ -29,7 +29,7 @@ get_header(); ?>
 						<?php endif; ?>
 						<div class="product-title-price">
 							<p class="product-title"><?php the_title(); ?></p>
-							<p></p>
+							<p><?php echo CFS()->get( 'price' ); ?></p>
 						</div>
 				</article><!-- #post-## -->
 

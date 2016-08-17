@@ -17,6 +17,28 @@ get_header(); ?>
 
 		<div class="front-page-container">
 			<div class="front-page-wrapper">
+				<div class="fp-product-section">
+					<ul>
+						<?php $args = array(
+							'taxonomy' => 'product-type',
+							'hide_empty' => true,
+						);
+						$terms = get_terms($args);
+						?>
+
+						<?php foreach ($terms as $term) : ?>
+							<li>
+								<img src="<?php echo get_template_directory_uri() . "/images/product-type-icons/".$term->slug.".svg"?>" alt="">
+								<p><?php echo $term->description ?></p>
+								<button>
+									<a href="<?php echo get_term_link($term); ?>">
+										<?php echo $term->name. ' Stuff' ?>
+									</a>
+								</button>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
 				<div class="fp-journal-section">
 					<h1>Inhabitent Journal</h1>
 
