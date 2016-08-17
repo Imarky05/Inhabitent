@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <div id="secondary" class="widget-area" role="complementary">
-	<div class="contact-info">
+	<!-- <div class="contact-info">
 		<h3>Contact Info</h3>
 		<p><i class="fa fa-phone"></i><a href="tel:7784567891">778-456-7891</a></p>
 		<p><i class="fa fa-envelope"></i><a href="mailto:info@inhabitent.com">info@inhabitent.com</a></p>
@@ -22,6 +22,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<p><strong>Monday-Friday:</strong> 9am to 5pm</p>
 		<p><strong>Saturday:</strong> 10am to 2pm</p>
 		<p><strong>Sunday:</strong> Closed</p>
-	</div>
+	</div> -->
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary -->
