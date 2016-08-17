@@ -26,7 +26,14 @@
 						<div class="site-branding">
 							<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-							<a href="<?php echo home_url()?>" class="logo-link"><img src="<?php echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent.svg"?>" alt="Home Page" class="nav-logo"/></a>
+							<a href="<?php echo home_url()?>" class="logo-link"><img src="<?php
+							if (is_front_page()) {
+								echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent-white.svg";
+							}
+							else {
+								echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent.svg";
+							}						
+							?>" alt="Home Page" class="nav-logo"/></a>
 						</div><!-- .site-branding -->
 
 						<nav id="site-navigation" class="main-navigation" role="navigation">

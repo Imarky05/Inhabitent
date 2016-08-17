@@ -22,13 +22,14 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="product-img-wrapper">
-								<a href="#">
+								<a href="<?php echo get_permalink() ?>">
 									<?php the_post_thumbnail( array('auto', 250) ); ?>
 								</a>
 							</div>
 						<?php endif; ?>
 						<div class="product-title-price">
-						<?php the_title( sprintf( '<p class="product-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+							<p class="product-title"><?php the_title(); ?></p>
+							<p></p>
 						</div>
 				</article><!-- #post-## -->
 

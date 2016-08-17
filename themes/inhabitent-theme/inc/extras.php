@@ -48,3 +48,17 @@ add_filter( 'body_class', 'inhabitent_starter_body_classes' );
 	    return 'Inhabitent Co.';
 	}
 	add_filter( 'login_headertitle', 'inhabitent_login_url_title' );
+
+/**
+* Adjusting archive page loop for products
+*/
+
+function inhabitent_modify_product_archive_query( $query ) {
+	if ( is_post_type_archive( 'product' ) && !is_admin() && $query->is_main_query()) {
+        $query->set( 'posts_per_page', 16 );
+        $query->set( 'order', 'ASC' );
+        $query->set( 'orderby', 'title' );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'inhabitent_modify_product_archive_query' );
