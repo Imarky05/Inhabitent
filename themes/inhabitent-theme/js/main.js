@@ -18,13 +18,13 @@ $(document).ready(function(){
 	window.addEventListener("scroll", function() {
 			    if (window.scrollY > 900) {
 			    	$("div.front-about-nav").addClass("fixed-front-about-nav-scroll");
-			    	$(".main-navigation").removeClass("page-link");
+			    	$(".front-about-main-nav").removeClass("page-link");
 			    	// $("div.fixed-nav-wrapper").removeClass("fixed-nav");
 
 			    }
 			    else {
 			    	$("div.front-about-nav").removeClass("fixed-front-about-nav-scroll");
-			    	$(".main-navigation").addClass("page-link");
+			    	$(".front-about-main-nav").addClass("page-link");
 			    	// $("div.fixed-nav-wrapper").addClass("fixed-nav");
 			    };
 			},false);

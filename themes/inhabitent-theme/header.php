@@ -46,7 +46,7 @@
 
 						<nav id="site-navigation" class="main-navigation <?php
 								if (is_front_page() || is_page_template('page-about.php')) {
-									echo "page-link";
+									echo "front-about-main-nav page-link";
 								}				
 							?>" 
 							role="navigation">
