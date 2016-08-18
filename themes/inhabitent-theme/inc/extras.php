@@ -67,17 +67,6 @@ add_action( 'pre_get_posts', 'inhabitent_modify_product_archive_query' );
 * User changeable background image of about page
 */
 
-// function inhabitent_about_styles_method() {
-
-// 	        $imgURL = ; //E.g. #FF0000
-// 	        $custom_css = "
-// 	                .about-hero-banner{
-// 	                        background: {$color};
-// 	                }";
-// 	        wp_add_inline_style( 'custom-style', $custom_css );
-// }
-// add_action( 'wp_enqueue_scripts', 'inhabitent_about_styles_method' );
-
 function inhabitent_hero_image_styles() {
         //checking for page template
         if( ! is_page_template('page-about.php')){
@@ -102,3 +91,21 @@ function inhabitent_hero_image_styles() {
             wp_add_inline_style( 'inhabitent-starter-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_hero_image_styles' );
+
+/**
+* logo image function
+*/
+
+function inhabitent_logo_image_styles() {
+        if(is_page_template('page-about.php') || is_front_page()){
+            $logo_image = ('../../images/logos/inhabitent-logo-tent.svg');
+            $custom_scss = "
+                    .nav-logo {
+                        background-image: url({$logo_image});
+                        background-size: cover;
+                        background-position: center;
+                    }";
+        }
+            wp_add_inline_style( 'inhabitent-starter-style', $custom_scss );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_logo_image_styles' );

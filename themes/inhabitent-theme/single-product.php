@@ -19,9 +19,7 @@ get_header(); ?>
 					<div class="single-product-content">
 						<?php the_title( '<h1 class="single-product-title">', '</h1>' ); ?>
 						<h2 class="single-product-price"><?php echo CFS()->get( 'price' ); ?></h2>
-						<p class="single-product-description">
 						<?php the_content(); ?>
-						</p>
 						<div class="entry-social-media">
 							<span><a href="#"><i class="fa fa-facebook"></i>Like</a></span>
 							<span><a href="#"><i class="fa fa-twitter"></i>Tweet</a></span>
