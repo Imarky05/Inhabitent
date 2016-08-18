@@ -21,13 +21,21 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-				<div class="fixed-nav-wrapper fixed-nav">
+				<div class="<?php
+							if (is_front_page() || is_page_template('page-about.php')) {
+								echo "fixed-nav-wrapper front-about-nav";
+							}
+							else {
+								echo "fixed-nav-wrapper fixed-nav";
+							}						
+							?>
+				">
 					<div class="container nav-wrapper">
 						<div class="site-branding">
 							<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 							<a href="<?php echo home_url()?>" class="logo-link"><img src="<?php
-							if (is_front_page()) {
+							if (is_front_page() || is_page_template('page-about.php')) {
 								echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent-white.svg";
 							}
 							else {
@@ -36,8 +44,14 @@
 							?>" alt="Home Page" class="nav-logo"/></a>
 						</div><!-- .site-branding -->
 
-						<nav id="site-navigation" class="main-navigation" role="navigation">
+						<nav id="site-navigation" class="main-navigation <?php
+								if (is_front_page() || is_page_template('page-about.php')) {
+									echo "page-link";
+								}				
+							?>" 
+							role="navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
 							<fieldset>

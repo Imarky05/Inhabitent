@@ -304,7 +304,7 @@ div.entry-content span a {
 		}
 	}
 
-	// font page
+	// front page
 
 	.front-site-main {
 		//position: relative;
@@ -325,21 +325,8 @@ div.entry-content span a {
 		align-items: center;
 	}
 
-	.home .hfeed {
-		.site-header{
-			height: 0;
-			display: block;
-			.fixed-nav{
-				background: none;
-				border: none;
-			}
-		}
-		.site-content .content-container .content-wrapper {
+	.home .hfeed .site-content .content-container .content-wrapper {
 			width: 100vw;
-			.content-area {
-				padding: 0;
-			}
-		}
 	}
 
 	.home .hfeed .site-header .fixed-nav .nav-wrapper .main-navigation a {

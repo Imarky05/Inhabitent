@@ -96,13 +96,7 @@ a {
 	}
 }
 
-header.site-header {
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: white;
-}
+
 
 /* Small menu. */
 	.menu-toggle,
@@ -154,6 +148,7 @@ header.site-header {
 
 .nav-logo {
 	height: 35px;
+	z-index: 5000;
 }
 
 .site-branding {
@@ -179,25 +174,58 @@ header.site-header {
 	align-items: center;
 }
 
-.fixed-nav {
-	transition: 2s;
-	height: 50px;
-	width: 100vw;
-	position: fixed;
-	background-color: rgba(255,255,255,1);
-	display: flex;
-	justify-content: center;
-	border-bottom-style: solid;
-	border-width: 0.5px;
-	border-color: rgba(0,0,0,0.2);
-	z-index: 1000;
+//-----------------------------
+	header.site-header {
+		height: 50px;
+		background-color: white;
+	}
 
-}
+	.home .hfeed .site-header{
+		height: 0;
+	}
 
-.fixed-nav-scroll {
-	transition: 2s;
-	background-color: rgba(255,255,255,0.8);
-}
+	.fixed-nav {
+		transition: 2s;
+		height: 50px;
+		width: 100vw;
+		position: fixed;
+		background-color: rgba(255,255,255,1);
+		display: flex;
+		justify-content: center;
+		border-bottom-style: solid;
+		border-width: 0.5px;
+		border-color: rgba(0,0,0,0.2);
+		z-index: 1000;
+	}
+
+	.front-about-nav {
+		transition: 2s;
+		height: 50px;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		z-index: 1000;
+	}
+
+	.fixed-front-about-nav-scroll {
+		position: fixed;
+		background-color: rgba(255,255,255,1);
+		border-bottom-style: solid;
+		border-width: 0.5px;
+		border-color: rgba(0,0,0,0.2);
+		z-index: 1000;
+	}
+
+	.fixed-nav-scroll {
+		transition: 2s;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	.page-link a {
+		color: white;
+	}
+
+//-=--------------------
 
 fieldset {
 	padding: 0;
