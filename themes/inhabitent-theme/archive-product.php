@@ -12,6 +12,18 @@ get_header(); ?>
 
 			<header class="page-header-product">
 				<h1>Shop Stuff</h1>
+				<div class="product-category-container">
+					<?php 
+						$args = array('taxonomy' => 'product-type','hide_empty' => true,);
+						$terms = get_terms($args);
+					?>
+					<?php foreach ($terms as $term) : ?>
+								<a href="<?php echo get_term_link($term); ?>">
+									<?php echo $term->name; ?>
+								</a>
+					<?php endforeach; ?>
+					
+				</div>
 			</header><!-- .page-header -->
 			
 			<div class="products-container">
@@ -29,7 +41,8 @@ get_header(); ?>
 						<?php endif; ?>
 						<div class="product-title-price">
 							<p class="product-title"><?php the_title(); ?></p>
-							<p><?php echo CFS()->get( 'price' ); ?></p>
+							<p class="product-dots">.................................................................</p>
+							<p class="product-price"><?php echo CFS()->get( 'price'); ?></p>
 						</div>
 				</article><!-- #post-## -->
 

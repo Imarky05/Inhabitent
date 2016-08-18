@@ -7,32 +7,28 @@
 
 get_header(); ?>
 		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+			<main id="main" class="site-main single-product-site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
+					<div class="single-product-img">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail( 'full' ); ?>
 						<?php endif; ?>
-
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
-					
-					<?php echo CFS()->get( 'price' ); ?>
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-					</div><!-- .entry-content -->
-					
-					<footer class="entry-footer">
-						<?php red_starter_entry_footer(); ?>
-					</footer><!-- .entry-footer -->
-					<div class="entry-social-media">
-						<span><a href="#"><i class="fa fa-facebook"></i>Like</a></span>
-						<span><a href="#"><i class="fa fa-twitter"></i>Tweet</a></span>
-						<span><a href="#"><i class="fa fa-pinterest"></i>Pin</a></span>
 					</div>
+					<div class="single-product-content">
+						<?php the_title( '<h1 class="single-product-title">', '</h1>' ); ?>
+						<h2 class="single-product-price"><?php echo CFS()->get( 'price' ); ?></h2>
+						<p class="single-product-description">
+						<?php the_content(); ?>
+						</p>
+						<div class="entry-social-media">
+							<span><a href="#"><i class="fa fa-facebook"></i>Like</a></span>
+							<span><a href="#"><i class="fa fa-twitter"></i>Tweet</a></span>
+							<span><a href="#"><i class="fa fa-pinterest"></i>Pin</a></span>
+						</div>
+					</div>
+					
 				</article><!-- #post-## -->
 
 

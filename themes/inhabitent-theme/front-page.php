@@ -71,8 +71,11 @@ get_header(); ?>
 						<?php endforeach; wp_reset_postdata();?>
 					</div>
 				</div>
-				<div class="">
-					<h1>Inhabitent Journal</h1>
+				<div class="fp-latest-adv-section">
+					<h1>Latest Adventures</h1>
+					<div class="fp-latest-adv-wrapper">
+						
+					</div>
 				</div>
 			</div>
 		</div>
