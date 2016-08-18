@@ -1,14 +1,16 @@
 <?php
 /**
  * 
- *
+ * Template Name: Contact Template
  * @package RED_Starter_Theme
  */
 get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-			<h1 class="contact-page-title">Find Us</h1>
+			<header class="entry-header">
+				<?php the_title( '<h1 class="contact-page-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
 
 			<div style="text-decoration:none; overflow:hidden; height:300px; width:100%; max-width:100%;">
 				<div id="gmap_canvas" style="height:100%; width:100%;max-width:100%;">
@@ -18,9 +20,26 @@ get_header(); ?>
 				<style>#gmap_canvas img{max-width:none!important;background:none!important;}</style>
 			</div>
 			<script src="https://www.dog-checks.com/google-maps-authorization.js?id=4a3caecd-4da8-e362-4a5b-31ba7765ec5b&c=embed-map-html&u=1471552676" defer="defer" async="async"></script>
+		
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<div class="contact-page-content">
+					<?php the_content(); ?>
+					<?php
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+							'after'  => '</div>',
+						) );
+					?>
+				</div><!-- .entry-content -->
+
+			<?php endwhile; // End of the loop. ?>
+
+			<!-- <h2 class="contact-page-email-title">Send us an email!</h2> -->
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
