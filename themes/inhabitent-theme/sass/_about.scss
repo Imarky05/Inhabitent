@@ -2,6 +2,43 @@
 # About
 --------------------------------------------------------------*/
 
+.about-site-main {
+	width: 100vw;
+}
+
+.page-template-page-about .hfeed .site-content .content-container .content-wrapper {
+	width: 100vw;
+}
+
 .about-hero-banner {
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		text-transform: uppercase;
+		color: white;
+		font-size: 3.2rem;
+	}
+}
+
+.about-container {
+	display: flex;
+	justify-content: center;
+}
+
+.about-wrapper {
+	margin: 30px;
+	width: $fixed__width;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	align-items: center;
+	h1{
+		text-transform: uppercase;
+		margin: 0;
+	}
+	p {
+		width: 70%;
+		margin: 10px 0;
+	}
 }

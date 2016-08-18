@@ -77,3 +77,28 @@ add_action( 'pre_get_posts', 'inhabitent_modify_product_archive_query' );
 // 	        wp_add_inline_style( 'custom-style', $custom_css );
 // }
 // add_action( 'wp_enqueue_scripts', 'inhabitent_about_styles_method' );
+
+function inhabitent_hero_image_styles() {
+        //checking for page template
+        if( ! is_page_template('page-about.php')){
+            return;
+        }
+            $hero_image = CFS()->get( 'about_banner_image' );
+            //checking to see if variable is empty or not.
+            if( ! $hero_image){
+                return;
+            } 
+            
+            $custom_css = "
+                    .about-hero-banner{
+                        width: 100%;
+                        height: 100vh;
+                        background: 
+                            linear-gradient( to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)),
+                            url({$hero_image});
+                        background-size: cover;
+                        background-position: bottom;
+                    }";
+            wp_add_inline_style( 'inhabitent-starter-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_hero_image_styles' );
