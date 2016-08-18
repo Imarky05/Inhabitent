@@ -91,3 +91,29 @@ function inhabitent_hero_image_styles() {
             wp_add_inline_style( 'inhabitent-starter-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_hero_image_styles' );
+
+//test
+// function tent_comment_ajax_handler() {
+
+// 	check_ajax_referer('tent_comment_status', 'security'); //checks nonce
+
+// 	// check if editor
+// 	if (! current_user_can('edit_others_posts')) {
+// 		exit;
+// 	}
+
+// 	$id = $_POST['the_post_id'];
+
+// 	if ( isset( $id ) && is_numeric($id)) {
+
+// 		$the_post = array(
+// 			'ID' => $id,
+// 			'comment_status' => 'closed'
+// 		);
+		
+// 		wp_update_post($the_post);
+
+// 	}
+
+// }
+// add_action('wp_ajax_tent_comment_ajax', 'tent_comment_ajax_handler');

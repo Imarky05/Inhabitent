@@ -1,3 +1,4 @@
+(function($){
 $(document).ready(function(){
 	console.log($);
 
@@ -16,7 +17,7 @@ $(document).ready(function(){
 
 	// nav bar fading front about page
 	window.addEventListener("scroll", function() {
-			    if (window.scrollY > 900) {
+			    if (window.scrollY > window.screen.height) {
 			    	$("div.front-about-nav").addClass("fixed-front-about-nav-scroll");
 			    	$(".front-about-main-nav").removeClass("page-link");
 			    	$(".front-about-logo").removeClass("white-logo");
@@ -35,4 +36,24 @@ $(document).ready(function(){
 	$( "a.toggle-search" ).click(function() {
 	 	$(".nav-search-label").addClass("nav-search-label-toggle");
 	});
+
+	// test
+	$('#close-comments').on('click', function(event){
+		event.preventDefault();
+
+		$.ajax({
+			method: 'post',
+			url: comment_vars.rest_url + 'wp/v2/posts/' + comment_vars.post_id,
+			data: {
+				comment_status: 'open'
+			},
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('X-WP-Nonce', comment_vars.wpapi_nonce);
+			}
+		}).done(function(response){
+			alert('success its been closed');
+		});
+	});
+
 });
+}(jQuery));
