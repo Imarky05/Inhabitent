@@ -91,21 +91,3 @@ function inhabitent_hero_image_styles() {
             wp_add_inline_style( 'inhabitent-starter-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_hero_image_styles' );
-
-/**
-* logo image function
-*/
-
-function inhabitent_logo_image_styles() {
-        if(is_page_template('page-about.php') || is_front_page()){
-            $logo_image = ('../../images/logos/inhabitent-logo-tent.svg');
-            $custom_scss = "
-                    .nav-logo {
-                        background-image: url({$logo_image});
-                        background-size: cover;
-                        background-position: center;
-                    }";
-        }
-            wp_add_inline_style( 'inhabitent-starter-style', $custom_scss );
-}
-add_action( 'wp_enqueue_scripts', 'inhabitent_logo_image_styles' );

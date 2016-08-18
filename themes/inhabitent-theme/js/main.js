@@ -19,13 +19,15 @@ $(document).ready(function(){
 			    if (window.scrollY > 900) {
 			    	$("div.front-about-nav").addClass("fixed-front-about-nav-scroll");
 			    	$(".front-about-main-nav").removeClass("page-link");
-			    	// $("div.fixed-nav-wrapper").removeClass("fixed-nav");
+			    	$(".front-about-logo").removeClass("white-logo");
+			    	$(".front-about-logo").addClass("green-logo");
 
 			    }
 			    else {
 			    	$("div.front-about-nav").removeClass("fixed-front-about-nav-scroll");
 			    	$(".front-about-main-nav").addClass("page-link");
-			    	// $("div.fixed-nav-wrapper").addClass("fixed-nav");
+			    	$(".front-about-logo").removeClass("green-logo");
+			    	$(".front-about-logo").addClass("white-logo");
 			    };
 			},false);
 

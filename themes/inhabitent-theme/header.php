@@ -34,7 +34,17 @@
 						<div class="site-branding">
 							<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-							<a href="<?php echo home_url()?>" class="logo-link"><div class="nav-logo"></div></a>
+							<a href="<?php echo home_url()?>" class="logo-link">
+							<div class="nav-logo <?php
+								if (is_front_page() || is_page_template('page-about.php')) {
+									echo "front-about-logo white-logo";
+								}
+								else {
+									echo "green-logo";
+								}						
+							?>">
+								
+							</div></a>
 						</div><!-- .site-branding -->
 
 						<nav id="site-navigation" class="main-navigation <?php
@@ -63,13 +73,3 @@
 			<div id="content" class="site-content">
 			<div class="content-container">
 			<div class="content-wrapper">
-
-
-<!-- <img src="<?php
-if (is_front_page() || is_page_template('page-about.php')) {
-	echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent-white.svg";
-}
-else {
-	echo get_template_directory_uri() . "/images/logos/inhabitent-logo-tent.svg";
-}						
-?>" alt="Home Page" class="nav-logo"/> -->

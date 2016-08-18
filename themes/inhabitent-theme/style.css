@@ -550,6 +550,16 @@ a {
   width: 50px;
   z-index: 5000; }
 
+.white-logo {
+  background-image: url(../../images/logos/inhabitent-logo-tent-white.svg);
+  background-size: cover;
+  background-position: center; }
+
+.green-logo {
+  background-image: url(../../images/logos/inhabitent-logo-tent.svg);
+  background-size: cover;
+  background-position: center; }
+
 .site-branding {
   display: -ms-flexbox;
   display: flex; }
