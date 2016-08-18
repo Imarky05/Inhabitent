@@ -1,0 +1,197 @@
+// front page
+
+	.front-site-main {
+		//position: relative;
+		width: 100vw;
+	}
+
+	.hero-banner {
+		//position: absolute;
+		left: 0;
+		background: 
+			linear-gradient( rgba(0,0,0,0.5) , rgba(0,0,0,0.5)),
+			url(../../images/home-hero.jpg);
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.home .hfeed .site-content .content-container .content-wrapper {
+			width: 100vw;
+	}
+
+	.home .hfeed .site-header .fixed-nav .nav-wrapper .main-navigation a {
+		color: white;
+	}
+
+	.front-page-container{
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+	.front-page-wrapper{
+		width: $fixed__width;
+	}
+
+	// front page journal section
+
+	.fp-journal-section {
+		
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+			margin: 70px;
+			font-weight: normal;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			letter-spacing: 3px;
+		}
+	}
+
+	.fp-journal-post-wrapper{
+		display: flex;
+		width: $fixed__width;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.fp-journal-post {
+		flex: 0 1 32%;
+		width: 350px;
+	}
+
+	.fp-journal-img {
+		height: 250px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img{
+			height: auto;
+			max-width: none;
+		}
+	}
+
+	.fp-journal-info {
+		padding: 10px 10px 18px 10px;
+		border: solid 1px rgba(0,0,0,0.1);
+		border-top-width: 5px;
+		.front-meta{
+			font-size: 13px;
+
+		}
+		.front-title {
+
+			margin-top: 0;
+		a {
+			letter-spacing: 1px;
+			text-decoration: none;
+			font-family: $font__accent;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			color: $__green;
+			font-weight: bold;
+			&:hover {
+				color: $__purple;
+			}
+		}
+		}
+	}
+
+	.fp-journal-read-more a {
+		transition: 0.5s;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: black;
+		padding: 10px 20px;
+		margin: 10px 0;
+		border: solid 0.5px black;
+		font-size: 0.8rem;
+		font-family: $font__accent;
+		&:hover {
+			transition: 0.5s;
+			color: white;
+			background-color: lighten($__green, 20%);
+			border-color: white;
+		}
+	}
+
+	// front page product section
+
+		.fp-product-wrapper{
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			h1 {
+				letter-spacing: 3px;
+				margin: 70px;
+				font-size: 2.5rem;
+				font-weight: normal;
+				text-transform: uppercase;
+			}
+
+				ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: flex;
+				justify-content: space-between;
+				li{
+
+					flex: 0 1 23%;
+					display: flex;
+					align-items: center;
+					flex-flow: column nowrap;
+					padding: 10px 10px 20px 10px;
+					border: solid 1px rgba(0,0,0,0.1);
+					border-top-width: 5px;
+					&:hover {
+						border-color: #d99054;
+						img{
+							transition: 1s;
+							transform: scale(1.1);
+						}
+					}
+					img{
+						transition: 1s;
+						width: 70px;
+					}
+					p{
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.fp-product-button {
+			transition: 1s;
+			color: white;
+			font-size: 0.9rem;
+			background: $__green;
+			border: 0;
+			border-radius: 0;
+			font-family: $font__accent;
+			text-transform: uppercase;
+			padding: 15px 30px;
+			box-shadow: none;
+			text-shadow: none;
+			a {
+				text-decoration: none;
+				color: white;
+			}
+			&:hover {
+				transition: 0.5s;
+				background: darken($__green, 10%);
+				box-shadow: none;
+			}
+			
+		}
