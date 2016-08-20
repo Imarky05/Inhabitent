@@ -10,19 +10,14 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header-product">
-				<h1>Shop Stuff</h1>
-				<div class="product-category-container">
+
 					<?php 
-						$args = array('taxonomy' => 'product-type','hide_empty' => true,);
-						$terms = get_terms($args);
-					?>
-					<?php foreach ($terms as $term) : ?>
-								<a href="<?php echo get_term_link($term); ?>">
-									<?php echo $term->name; ?>
-								</a>
-					<?php endforeach; ?>
+						$term =	$wp_query->queried_object;
+						echo '<h1>'.$term->name.'</h1>';
+						echo '<p>'.$term->description.'</p>';
+					 ?>
 					
-				</div>
+				
 			</header><!-- .page-header -->
 			
 			<div class="products-container">

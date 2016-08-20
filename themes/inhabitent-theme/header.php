@@ -57,14 +57,7 @@
 
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
-							<fieldset>
-								<a href="#" class="toggle-search">
-									<i class="fa fa-search"></i>
-								</a>
-								<label class="nav-search-label">
-									<input type="search" name="search" placeholder="Type and hit enter" class="nav-search">
-								</label>
-							</fieldset>
+							<?php get_search_form(); ?>
 						</nav><!-- #site-navigation -->
 					</div>
 				</div>

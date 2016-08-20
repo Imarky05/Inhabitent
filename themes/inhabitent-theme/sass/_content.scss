@@ -49,7 +49,7 @@
 }
 
 .type-post {
-	padding: 35px 0;
+	padding: 40px 0 0 0;
 }
 
 //-----------
@@ -65,13 +65,13 @@
 }
 
 .content-area {
-	flex: 3 0 73%;
-	padding-right: 60px;
+	flex: 3 0 67%;
 }
 
 .widget-area {
-	flex: 1 0 27%;
-	padding-left: 60px;
+	flex: 1 0 21%;
+	padding-left: 6%;
+	margin-left: 6%;
 }
 
 .entry-header {
@@ -117,7 +117,7 @@
 	text-transform: uppercase;
 }
 
-div.entry-content span a {
+.read-more {
 	transition: 0.5s;
 	text-decoration: none;
 	text-transform: uppercase;

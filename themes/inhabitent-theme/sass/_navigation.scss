@@ -247,21 +247,48 @@ fieldset {
 	border-style: none;
 }
 
-a.toggle-search {
-	display: inline-block;
-}
-
-.nav-search-label {
-	display: none;
-}
-
-.nav-search-label-toggle {
-	display: inline-block;
-}
-
-input.nav-search {
+input.search-field {
 	border-style: none;
 	position: static;
 	right: 0;
+	background: none;
+	&:focus{
+		outline: none;
+	}
 }
 
+.search-field-white {
+	color: white;
+	&:focus{
+		color: white;
+	}
+
+}
+
+.search-field-green {
+	color: $__green;
+	&:focus{
+		color: $__green;
+	}
+
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-submit {
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+
+i.fa-search-green {
+	color: $__green;
+	font-size: 1rem;
+}
+
+i.fa-search-white {
+	color: white;
+	font-size: 1rem;
+}

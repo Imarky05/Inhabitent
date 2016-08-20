@@ -71,10 +71,24 @@ get_header(); ?>
 						<?php endforeach; wp_reset_postdata();?>
 					</div>
 				</div>
-				<div class="fp-latest-adv-section">
+				<div class="fp-adventure-section">
 					<h1>Latest Adventures</h1>
-					<div class="fp-latest-adv-wrapper">
-						
+					<div class="fp-adventure-wrapper">
+						<?php 
+							$args = array('post_type' => 'adventure');
+							$loop = new WP_Query( $args );
+						?>
+						<ul class="">
+						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<li>
+								<h2 class="fp-adventure-title"><?php the_title(); ?></h2>
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail( large ); ?>
+								<?php endif; ?>
+							</li>
+						<?php endwhile; wp_reset_postdata();?>
+						</ul>
+
 					</div>
 				</div>
 			</div>

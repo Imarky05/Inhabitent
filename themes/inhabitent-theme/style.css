@@ -394,21 +394,18 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
   background: #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: .6em 1em .4em; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    border-color: #ccc #bbb #aaa; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -427,8 +424,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: 1px solid #ccc; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -638,19 +634,39 @@ fieldset {
   text-decoration: none;
   border-style: none; }
 
-a.toggle-search {
-  display: inline-block; }
-
-.nav-search-label {
-  display: none; }
-
-.nav-search-label-toggle {
-  display: inline-block; }
-
-input.nav-search {
+input.search-field {
   border-style: none;
   position: static;
-  right: 0; }
+  right: 0;
+  background: none; }
+  input.search-field:focus {
+    outline: none; }
+
+.search-field-white {
+  color: white; }
+  .search-field-white:focus {
+    color: white; }
+
+.search-field-green {
+  color: #248A83; }
+  .search-field-green:focus {
+    color: #248A83; }
+
+.search-form {
+  position: relative; }
+
+.search-submit {
+  border: none;
+  background: none;
+  box-shadow: none; }
+
+i.fa-search-green {
+  color: #248A83;
+  font-size: 1rem; }
+
+i.fa-search-white {
+  color: white;
+  font-size: 1rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -960,7 +976,7 @@ div.comment-metadata a {
   display: block; }
 
 .type-post {
-  padding: 35px 0; }
+  padding: 40px 0 0 0; }
 
 .content-container {
   display: -ms-flexbox;
@@ -974,14 +990,14 @@ div.comment-metadata a {
   display: flex; }
 
 .content-area {
-  -ms-flex: 3 0 73%;
-      flex: 3 0 73%;
-  padding-right: 60px; }
+  -ms-flex: 3 0 67%;
+      flex: 3 0 67%; }
 
 .widget-area {
-  -ms-flex: 1 0 27%;
-      flex: 1 0 27%;
-  padding-left: 60px; }
+  -ms-flex: 1 0 21%;
+      flex: 1 0 21%;
+  padding-left: 6%;
+  margin-left: 6%; }
 
 .entry-header {
   position: relative;
@@ -1023,7 +1039,7 @@ div.comment-metadata a {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase; }
 
-div.entry-content span a {
+.read-more {
   transition: 0.5s;
   text-decoration: none;
   text-transform: uppercase;
@@ -1032,7 +1048,7 @@ div.entry-content span a {
   border: solid 0.5px black;
   font-size: 0.8rem;
   font-family: "Novecento Sans Wide"; }
-  div.entry-content span a:hover {
+  .read-more:hover {
     transition: 0.5s;
     color: white;
     background-color: #45cfc5;
@@ -1582,7 +1598,7 @@ object {
     background: #19625d;
     box-shadow: none; }
 
-.fp-latest-adv-section {
+.fp-adventure-section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
@@ -1591,12 +1607,121 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .fp-latest-adv-section h1 {
+  .fp-adventure-section h1 {
     margin: 70px;
     font-weight: normal;
     text-transform: uppercase;
     font-size: 2.5rem;
     letter-spacing: 3px; }
+  .fp-adventure-section ul {
+    width: 1120px;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+    height: 560px; }
+    .fp-adventure-section ul li {
+      padding: 10px;
+      overflow: hidden;
+      position: relative; }
+      .fp-adventure-section ul li .fp-adventure-title {
+        position: absolute; }
+      .fp-adventure-section ul li:first-child {
+        background-color: red;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+        max-width: 50%;
+        height: 560px; }
+      .fp-adventure-section ul li:nth-child(n+2) {
+        background-color: green;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+        max-width: 50%;
+        height: 280px; }
+      .fp-adventure-section ul li:nth-child(n+3) {
+        background-color: blue;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+        height: 280px;
+        width: 280px; }
+      .fp-adventure-section ul li:last-child {
+        background-color: orange;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+        height: 280px;
+        width: 280px; }
+
+/*--------------------------------------------------------------
+# Adventures
+--------------------------------------------------------------*/
+.adventures-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.adventure-wrapper {
+  position: relative;
+  -ms-flex: 0 0 49%;
+      flex: 0 0 49%;
+  height: 560px;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .adventure-wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none; }
+  .adventure-wrapper .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); }
+
+.adventure-content {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .adventure-content h2 {
+    font-family: "Merri Weather";
+    font-weight: normal; }
+    .adventure-content h2 a {
+      color: white;
+      text-decoration: none; }
+      .adventure-content h2 a:hover {
+        color: #f0e4d1; }
+
+.adventure-read-more {
+  margin: 20px;
+  transition: 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 20px;
+  border: solid 0.5px white;
+  font-size: 0.8rem;
+  font-family: "Novecento Sans Wide"; }
+  .adventure-read-more:hover {
+    transition: 0.5s;
+    color: black;
+    background-color: #45cfc5;
+    border-color: transparent; }
+
+.adventure-title {
+  padding: 20px;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Page Templates

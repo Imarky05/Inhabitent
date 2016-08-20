@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Adventures
+--------------------------------------------------------------*/
+
+.adventures-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.adventure-wrapper {
+	position: relative;
+	flex: 0 0 49%;
+	height: $fixed__width / 2;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	img {
+		width: auto;
+		height: 100%;
+		max-width: none;
+	}
+	.overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient( rgba(0,0,0,0.2) , rgba(0,0,0,0.2));
+	}
+}
+
+.adventure-content {
+	h2 {
+		font-family: $font__main;
+		font-weight: normal;
+		a {
+			color: white;
+			text-decoration: none;
+			&:hover {
+				color: $__yellow;
+			}
+		}
+	}
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.adventure-read-more {
+	margin: 20px;
+	transition: 0.5s;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 10px 20px;
+	border: solid 0.5px white;
+	font-size: 0.8rem;
+	font-family: $font__accent;
+	&:hover {
+		transition: 0.5s;
+		color: black;
+		background-color: lighten($__green, 20%);
+		border-color: rgba(0,0,0,0);
+	}
+}
+
+.adventure-title {
+	padding: 20px;
+	margin: 0;
+}

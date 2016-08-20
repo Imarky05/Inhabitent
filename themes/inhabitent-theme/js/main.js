@@ -2,6 +2,8 @@
 $(document).ready(function(){
 	console.log($);
 
+	$('.search-field').hide();
+
 	// nav bar fading
 	window.addEventListener("scroll", function() {
 			    if (window.scrollY > 50) {
@@ -22,6 +24,10 @@ $(document).ready(function(){
 			    	$(".front-about-main-nav").removeClass("page-link");
 			    	$(".front-about-logo").removeClass("white-logo");
 			    	$(".front-about-logo").addClass("green-logo");
+			    	$(".fp-fa-search").removeClass("fa-search-white");
+			    	$(".fp-fa-search").addClass("fa-search-green");
+			    	$(".fp-search-field").removeClass("search-field-white");
+			    	$(".fp-search-field").addClass("search-field-green");
 
 			    }
 			    else {
@@ -29,31 +35,35 @@ $(document).ready(function(){
 			    	$(".front-about-main-nav").addClass("page-link");
 			    	$(".front-about-logo").removeClass("green-logo");
 			    	$(".front-about-logo").addClass("white-logo");
+			    	$(".fp-fa-search").removeClass("fa-search-green");
+			    	$(".fp-fa-search").addClass("fa-search-white");
+			    	$(".fp-search-field").removeClass("search-field-green");
+			    	$(".fp-search-field").addClass("search-field-white");
 			    };
 			},false);
 
-	// Nav Search Field
-	$( "a.toggle-search" ).click(function() {
-	 	$(".nav-search-label").addClass("nav-search-label-toggle");
-	});
 
-	// test
-	$('#close-comments').on('click', function(event){
-		event.preventDefault();
+	// search roggle
+	$('body').on('click', function(event) {
+        var searchBar = $('.search-field');
+        var searchButton = $('.search-submit');
 
-		$.ajax({
-			method: 'post',
-			url: comment_vars.rest_url + 'wp/v2/posts/' + comment_vars.post_id,
-			data: {
-				comment_status: 'open'
-			},
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader('X-WP-Nonce', comment_vars.wpapi_nonce);
-			}
-		}).done(function(response){
-			alert('success its been closed');
-		});
-	});
+        console.log(event.target);
+
+        if ($(event.target).hasClass("search-submit") || $(event.target).hasClass("fa-search")) {
+            searchBar.toggle('slow');
+            searchBar.focus(); //check if button was clicked
+            event.preventDefault();
+        } else if ($(event.target).hasClass("search-field")) {
+        	// do nothing
+        } else if (searchBar.val().length > 0) {//end first if statement
+            searchBar.focusout();
+            searchBar.show(); //check if there is entered search string
+        } else { //end second if statement
+            searchBar.hide('slow');
+            searchBar.focusout(); //if no search string, close search bar
+        } //end else statement
+    }); //End searc
 
 });
 }(jQuery));
