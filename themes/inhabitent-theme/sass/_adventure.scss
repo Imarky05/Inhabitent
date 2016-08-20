@@ -6,6 +6,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	margin: 40px 0;
 }
 
 .adventure-wrapper {
@@ -15,6 +16,7 @@
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	margin: 1% 0;
 	img {
 		width: auto;
 		height: 100%;
@@ -24,14 +26,17 @@
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient( rgba(0,0,0,0.2) , rgba(0,0,0,0.2));
+		background: linear-gradient( rgba(0,0,0,0.3) , rgba(0,0,0,0.3));
 	}
 }
 
 .adventure-content {
-	h2 {
+	h2.adventure-title {
+		padding: 50px 20px;
+		margin: 0;
 		font-family: $font__main;
 		font-weight: normal;
+		font-size: 3.2rem;
 		a {
 			color: white;
 			text-decoration: none;
@@ -58,13 +63,80 @@
 	font-family: $font__accent;
 	&:hover {
 		transition: 0.5s;
-		color: black;
-		background-color: lighten($__green, 20%);
+		color: white;
+		background-color: darken($__green, 10%);
 		border-color: rgba(0,0,0,0);
 	}
 }
 
-.adventure-title {
-	padding: 20px;
-	margin: 0;
+.adventure-page-title {
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 2.5rem;
+}
+
+.adventure-page-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	border-bottom: dashed 1px rgba(0,0,0,0.3);
+}
+
+
+
+
+.adventure-single-site-main {
+	width: 100vw;
+}
+
+.single-adventure .hfeed .site-content .content-container .content-wrapper {
+	width: 100vw;
+}
+
+.adventure-single-hero-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.adventure-single-post {
+	display: flex;
+	justify-content: center;
+}
+
+.adventure-single-container {
+	width: $fixed__width;
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+.adventure-single-wrapper {
+	margin: 30px;
+	width: 70%;
+	margin: 10px 0;
+	h1{
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+		line-height: 1.2;
+	}
+	
+}
+
+.adventure-single-meta {
+	font-family: $font__accent;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	margin: 1.2rem 0;
+}
+
+.adventure-single-content {
+	font-size: 1rem;
+	p span{
+		line-height: 1.7rem;
+	}
 }

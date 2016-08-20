@@ -21,7 +21,7 @@ $(document).ready(function(){
 	window.addEventListener("scroll", function() {
 			    if (window.scrollY > window.screen.height) {
 			    	$("div.front-about-nav").addClass("fixed-front-about-nav-scroll");
-			    	$(".front-about-main-nav").removeClass("page-link");
+			    	$(".front-about-main-nav").removeClass("white-nav-links");
 			    	$(".front-about-logo").removeClass("white-logo");
 			    	$(".front-about-logo").addClass("green-logo");
 			    	$(".fp-fa-search").removeClass("fa-search-white");
@@ -32,7 +32,7 @@ $(document).ready(function(){
 			    }
 			    else {
 			    	$("div.front-about-nav").removeClass("fixed-front-about-nav-scroll");
-			    	$(".front-about-main-nav").addClass("page-link");
+			    	$(".front-about-main-nav").addClass("white-nav-links");
 			    	$(".front-about-logo").removeClass("green-logo");
 			    	$(".front-about-logo").addClass("white-logo");
 			    	$(".fp-fa-search").removeClass("fa-search-green");

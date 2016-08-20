@@ -271,8 +271,7 @@ th {
 --------------------------------------------------------------*/
 body,
 button,
-input,
-select,
+inputulselect,
 textarea {
   color: #404040;
   font-family: "Merri Weather";
@@ -286,9 +285,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Novecento Sans Wide"; }
 
 /* Copy */
-p {
-  margin-bottom: 1.5em; }
-
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -353,9 +349,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
-
-ul, ol {
-  margin: 0 0 1.5em 3em; }
 
 ul {
   list-style: disc; }
@@ -447,17 +440,22 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.container {
+  width: 1120px; }
+
+.nav-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+header.site-header {
+  height: 50px;
+  background-color: white; }
+
 /* Links */
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+a:hover, a:active {
+  outline: 0; }
 
 /* Menus */
 .main-navigation {
@@ -529,17 +527,10 @@ a {
   text-align: right;
   width: 50%; }
 
-.main-navigation ul {
+/* Nav Logo */
+.site-branding {
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
-
-.main-navigation a {
-  margin: 0 10px;
-  text-transform: uppercase;
-  font-family: "Novecento Sans Wide";
-  color: #248A83; }
+  display: flex; }
 
 .nav-logo {
   height: 35px;
@@ -556,36 +547,82 @@ a {
   background-size: cover;
   background-position: center; }
 
-.site-branding {
-  display: -ms-flexbox;
-  display: flex; }
-
-.main-navigation {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
-
-.container {
-  width: 1120px; }
-
-.nav-wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center; }
-
 .logo-link {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
 
-header.site-header {
-  height: 50px;
-  background-color: white; }
+/* Search Form in the Nav Bar */
+fieldset {
+  z-index: 5000;
+  padding: 0;
+  text-decoration: none;
+  border-style: none; }
 
-.home .hfeed .site-header, .page-template-page-about .hfeed .site-header {
+input.search-field {
+  border-style: none;
+  position: static;
+  right: 0;
+  background: none; }
+  input.search-field:focus {
+    outline: none; }
+
+.search-form {
+  position: relative; }
+
+.search-submit {
+  border: none;
+  background: none;
+  box-shadow: none; }
+
+i.fa-search-green {
+  color: #248A83;
+  font-size: 1rem; }
+
+i.fa-search-white {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px black; }
+
+label input.search-field-white {
+  color: white;
+  font-family: "Novecento Sans Wide";
+  font-size: 1.2rem; }
+  label input.search-field-white:focus {
+    color: white; }
+
+label input.search-field-green {
+  color: #248A83;
+  font-family: "Novecento Sans Wide";
+  font-size: 1.2rem; }
+  label input.search-field-green:focus {
+    color: #248A83; }
+
+/* Page links in nav bar */
+.main-navigation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .main-navigation ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+  .main-navigation a {
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-family: "Novecento Sans Wide";
+    color: #248A83; }
+
+.white-nav-links a {
+  color: white;
+  text-shadow: 1px 1px 2px black; }
+
+.home .hfeed .site-header,
+.page-template-page-about .hfeed .site-header,
+.single-adventure .hfeed .site-header {
   height: 0; }
 
 .fixed-nav {
@@ -624,49 +661,6 @@ header.site-header {
 .fixed-nav-scroll {
   transition: 2s;
   background-color: rgba(255, 255, 255, 0.8); }
-
-.page-link a {
-  color: white; }
-
-fieldset {
-  z-index: 5000;
-  padding: 0;
-  text-decoration: none;
-  border-style: none; }
-
-input.search-field {
-  border-style: none;
-  position: static;
-  right: 0;
-  background: none; }
-  input.search-field:focus {
-    outline: none; }
-
-.search-field-white {
-  color: white; }
-  .search-field-white:focus {
-    color: white; }
-
-.search-field-green {
-  color: #248A83; }
-  .search-field-green:focus {
-    color: #248A83; }
-
-.search-form {
-  position: relative; }
-
-.search-submit {
-  border: none;
-  background: none;
-  box-shadow: none; }
-
-i.fa-search-green {
-  color: #248A83;
-  font-size: 1rem; }
-
-i.fa-search-white {
-  color: white;
-  font-size: 1rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -729,7 +723,7 @@ i.fa-search-white {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 3rem;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
@@ -739,6 +733,7 @@ i.fa-search-white {
   display: none; }
 
 div.widget-area {
+  padding-top: 40px;
   border-left-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.2); }
@@ -762,10 +757,6 @@ div.widget-area {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-
-.textwidget, .business-info {
-  margin: 0;
-  padding: 10px 0; }
 
 h2.widget-title {
   text-transform: uppercase;
@@ -990,14 +981,14 @@ div.comment-metadata a {
   display: flex; }
 
 .content-area {
-  -ms-flex: 3 0 67%;
-      flex: 3 0 67%; }
+  -ms-flex: 3 0 65%;
+      flex: 3 0 65%; }
 
 .widget-area {
-  -ms-flex: 1 0 21%;
-      flex: 1 0 21%;
-  padding-left: 6%;
-  margin-left: 6%; }
+  -ms-flex: 1 0 25%;
+      flex: 1 0 25%;
+  padding-left: 5%;
+  margin-left: 5%; }
 
 .entry-header {
   position: relative;
@@ -1278,35 +1269,6 @@ object {
       flex: 0 1 23%;
   overflow: hidden; }
 
-.single-product-site-main .type-product {
-  padding: 50px 0;
-  width: 1120px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .single-product-site-main .type-product .single-product-img {
-    -ms-flex: 0 1 48%;
-        flex: 0 1 48%; }
-  .single-product-site-main .type-product .single-product-content {
-    -ms-flex: 0 1 48%;
-        flex: 0 1 48%; }
-    .single-product-site-main .type-product .single-product-content h1 {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 2.5rem;
-      color: #d99054;
-      margin-top: 0;
-      line-height: 1; }
-  .single-product-site-main .type-product .single-product-price {
-    margin-top: 0;
-    line-height: 1;
-    font-weight: normal;
-    font-size: 2rem; }
-  .single-product-site-main .type-product p span {
-    line-height: 1.8rem;
-    font-size: 1rem; }
-
 .page-header-product {
   display: -ms-flexbox;
   display: flex;
@@ -1358,22 +1320,49 @@ object {
   overflow: hidden; }
   .product-title-price p {
     margin: 0; }
+  .product-title-price .product-title {
+    position: absolute;
+    font-family: "Merri Weather";
+    background-color: white;
+    padding-right: 3px; }
+  .product-title-price .product-dots {
+    right: 0; }
+  .product-title-price .product-price {
+    padding-right: 15px;
+    padding-left: 2px;
+    position: absolute;
+    right: 0;
+    background-color: white; }
 
-.product-title {
-  position: absolute;
-  font-family: "Merri Weather";
-  background-color: white;
-  padding-right: 3px; }
-
-.product-dots {
-  right: 0; }
-
-.product-price {
-  padding-right: 15px;
-  padding-left: 2px;
-  position: absolute;
-  right: 0;
-  background-color: white; }
+/* Single Product Page */
+.single-product-site-main .type-product {
+  padding: 50px 0;
+  width: 1120px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .single-product-site-main .type-product .single-product-img {
+    -ms-flex: 0 1 48%;
+        flex: 0 1 48%; }
+  .single-product-site-main .type-product .single-product-content {
+    -ms-flex: 0 1 48%;
+        flex: 0 1 48%; }
+    .single-product-site-main .type-product .single-product-content h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      color: #d99054;
+      margin-top: 0;
+      line-height: 1; }
+  .single-product-site-main .type-product .single-product-price {
+    margin-top: 0;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 2rem; }
+  .single-product-site-main .type-product p span {
+    line-height: 1.8rem;
+    font-size: 1rem; }
 
 /*--------------------------------------------------------------
 # About
@@ -1420,6 +1409,9 @@ object {
     width: 70%;
     margin: 10px 0; }
 
+/*--------------------------------------------------------------
+# Front-page
+--------------------------------------------------------------*/
 .front-site-main {
   width: 100vw; }
 
@@ -1599,6 +1591,7 @@ object {
     box-shadow: none; }
 
 .fp-adventure-section {
+  margin-bottom: 50px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
@@ -1616,47 +1609,80 @@ object {
   .fp-adventure-section ul {
     width: 1120px;
     list-style: none;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
     margin: 0;
     padding: 0;
     height: 560px; }
     .fp-adventure-section ul li {
+      float: left;
       padding: 10px;
       overflow: hidden;
       position: relative; }
-      .fp-adventure-section ul li .fp-adventure-title {
-        position: absolute; }
+      .fp-adventure-section ul li .fp-adventure-img {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative; }
+        .fp-adventure-section ul li .fp-adventure-img img {
+          min-height: 560px;
+          width: auto;
+          max-width: none; }
       .fp-adventure-section ul li:first-child {
-        background-color: red;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-        max-width: 50%;
-        height: 560px; }
+        height: 560px;
+        width: 560px; }
       .fp-adventure-section ul li:nth-child(n+2) {
-        background-color: green;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-        max-width: 50%;
-        height: 280px; }
+        height: 280px;
+        width: 560px; }
       .fp-adventure-section ul li:nth-child(n+3) {
-        background-color: blue;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
         height: 280px;
         width: 280px; }
       .fp-adventure-section ul li:last-child {
-        background-color: orange;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
         height: 280px;
         width: 280px; }
+
+.fp-adventure-read-more {
+  transition: 1s;
+  color: white;
+  font-size: 1.2rem;
+  background: #248A83;
+  border: 0;
+  border-radius: 0;
+  font-family: "Novecento Sans Wide";
+  text-transform: uppercase;
+  padding: 15px 30px;
+  box-shadow: none;
+  text-shadow: none;
+  text-decoration: none;
+  color: white; }
+  .fp-adventure-read-more:hover {
+    transition: 0.5s;
+    background: #19625d;
+    box-shadow: none; }
+
+.fp-adventure-title {
+  padding: 20px;
+  padding-bottom: 0px;
+  margin: 0;
+  font-family: "Merri Weather";
+  font-weight: normal;
+  font-size: 1.8rem; }
+  .fp-adventure-title a {
+    color: white;
+    text-decoration: none; }
+    .fp-adventure-title a:hover {
+      color: #f0e4d1; }
+
+.overlay {
+  padding: 10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); }
 
 /*--------------------------------------------------------------
 # Adventures
@@ -1667,7 +1693,8 @@ object {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  margin: 40px 0; }
 
 .adventure-wrapper {
   position: relative;
@@ -1678,7 +1705,8 @@ object {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  margin: 1% 0; }
   .adventure-wrapper img {
     width: auto;
     height: 100%;
@@ -1687,20 +1715,23 @@ object {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); }
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); }
 
 .adventure-content {
   z-index: 2;
   position: absolute;
   top: 0;
   left: 0; }
-  .adventure-content h2 {
+  .adventure-content h2.adventure-title {
+    padding: 50px 20px;
+    margin: 0;
     font-family: "Merri Weather";
-    font-weight: normal; }
-    .adventure-content h2 a {
+    font-weight: normal;
+    font-size: 3.2rem; }
+    .adventure-content h2.adventure-title a {
       color: white;
       text-decoration: none; }
-      .adventure-content h2 a:hover {
+      .adventure-content h2.adventure-title a:hover {
         color: #f0e4d1; }
 
 .adventure-read-more {
@@ -1715,18 +1746,83 @@ object {
   font-family: "Novecento Sans Wide"; }
   .adventure-read-more:hover {
     transition: 0.5s;
-    color: black;
-    background-color: #45cfc5;
+    color: white;
+    background-color: #19625d;
     border-color: transparent; }
 
-.adventure-title {
-  padding: 20px;
-  margin: 0; }
+.adventure-page-title {
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem; }
+
+.adventure-page-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 40px;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.3); }
+
+.adventure-single-site-main {
+  width: 100vw; }
+
+.single-adventure .hfeed .site-content .content-container .content-wrapper {
+  width: 100vw; }
+
+.adventure-single-hero-banner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.adventure-single-post {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.adventure-single-container {
+  width: 1120px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 50px 0; }
+
+.adventure-single-wrapper {
+  margin: 30px;
+  width: 70%;
+  margin: 10px 0; }
+  .adventure-single-wrapper h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 1.2; }
+
+.adventure-single-meta {
+  font-family: "Novecento Sans Wide";
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin: 1.2rem 0; }
+
+.adventure-single-content {
+  font-size: 1rem; }
+  .adventure-single-content p span {
+    line-height: 1.7rem; }
 
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 .site-footer {
   height: 355px;
   display: -ms-flexbox;
@@ -1798,3 +1894,57 @@ div.copyright p {
 .contact-info p i {
   font-size: 1.2rem;
   margin-right: 5px; }
+
+/*--------------------------------------------------------------
+# Error
+--------------------------------------------------------------*/
+.error-page-title {
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  line-height: 1.2; }
+
+.widget_recent_entries h2, .widget_categories h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.widget_recent_entries ul, .widget_categories ul {
+  list-style: none;
+  padding: 0; }
+  .widget_recent_entries ul li a, .widget_categories ul li a {
+    text-decoration: none;
+    color: #248A83; }
+    .widget_recent_entries ul li a:hover, .widget_categories ul li a:hover {
+      color: #2f1339; }
+
+/*--------------------------------------------------------------
+# Search
+--------------------------------------------------------------*/
+.search-page-title {
+  margin: 40px 0;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  line-height: 1.2; }
+
+.search-page-header {
+  padding: 30px 0;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+  border-color: rgba(0, 0, 0, 0.2); }
+
+.search-header h2 a {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #248A83;
+  text-decoration: none; }
+  .search-header h2 a:hover {
+    color: #2f1339; }
+
+.search-meta {
+  font-family: "Novecento Sans Wide";
+  text-transform: uppercase; }

@@ -81,13 +81,27 @@ get_header(); ?>
 						<ul class="">
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 							<li>
-								<h2 class="fp-adventure-title"><?php the_title(); ?></h2>
+								<div class="adventure-content">
+
+								<h2 class="fp-adventure-title"><a href="<?php echo get_permalink() ?>">
+								<?php the_title(); ?></a></h2>
+								<p><a href="<?php echo get_permalink() ?>" class="adventure-read-more">Read more &rarr;</a></p>
+
+								</div>
+
+								<div class="fp-adventure-img">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( large ); ?>
 								<?php endif; ?>
+								<div class="overlay">
+								</div>
+								</div>
+								
 							</li>
 						<?php endwhile; wp_reset_postdata();?>
 						</ul>
+
+						<p><a href="<?php echo get_post_type_archive_link( 'adventure' ) ?>" class="fp-adventure-read-more">More Adventures</a></p>
 
 					</div>
 				</div>

@@ -2,101 +2,100 @@
 # Navigation
 --------------------------------------------------------------*/
 
+.container {
+	width: $fixed__width;
+}
+
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+header.site-header {
+	height: 50px;
+	background-color: white;
+}
+
 /* Links */
 
-a {
-	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
+	a {
+		&:hover,
+		&:active {
+			outline: 0;
+		}
 	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
 
 /* Menus */
 
-.main-navigation {
-	clear: both;
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+	.main-navigation {
+		clear: both;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999em;
-			z-index: 99999;
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
 
 			ul {
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: $base__space-unit;
 				left: -999em;
-				top: 0;
-			}
+				z-index: 99999;
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+				ul {
+					left: -999em;
+					top: 0;
+				}
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+
+				a {
+					width: 200px;
+				}
+
+				:hover > a,
+				.focus > a {
+				}
+
+				a:hover,
+				a.focus {
 				}
 			}
 
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
 			}
 		}
+		li {
+			float: left;
+			position: relative;
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+			&:hover > a,
+			&.focus > a {
+			}
+		}
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a {
 		}
 	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
-}
-
-
 
 /* Small menu. */
 	.menu-toggle,
@@ -134,69 +133,126 @@ a {
 		}
 	}
 
-.main-navigation ul {
-	display: flex;
-	justify-content: flex-end;
-}
+/* Nav Logo */
 
-.main-navigation a {
-	margin: 0 10px;
-	text-transform: uppercase;
-	font-family: $font__accent;
-	color: $__green;
-}
-
-.nav-logo {
-	height: 35px;
-	width: 50px;
-	z-index: 5000;
-}
-
-.white-logo {
-	background-image: url(../../images/logos/inhabitent-logo-tent-white.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.green-logo {
-	background-image: url(../../images/logos/inhabitent-logo-tent.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.site-branding {
-	display: flex;
-}
-
-.main-navigation {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.container {
-	width: $fixed__width;
-}
-
-.nav-wrapper {
-	display: flex;
-	align-items: center;
-}
-
-.logo-link {
-	display: flex;
-	align-items: center;
-}
-
-//-----------------------------
-	header.site-header {
-		height: 50px;
-		background-color: white;
+	.site-branding {
+		display: flex;
 	}
 
-	.home .hfeed .site-header, .page-template-page-about .hfeed .site-header{
+	.nav-logo {
+		height: 35px;
+		width: 50px;
+		z-index: 5000;
+	}
+
+	.white-logo {
+		background-image: url(../../images/logos/inhabitent-logo-tent-white.svg);
+	    background-size: cover;
+	    background-position: center;
+	}
+
+	.green-logo {
+		background-image: url(../../images/logos/inhabitent-logo-tent.svg);
+	    background-size: cover;
+	    background-position: center;
+	}
+
+	.logo-link {
+		display: flex;
+		align-items: center;
+	}
+
+/* Search Form in the Nav Bar */
+
+	fieldset {
+		z-index: 5000;
+		padding: 0;
+		text-decoration: none;
+		border-style: none;
+	}
+
+	input.search-field {
+		border-style: none;
+		position: static;
+		right: 0;
+		background: none;
+		&:focus{
+			outline: none;
+		}
+	}
+
+	.search-form {
+		position: relative;
+	}
+
+	.search-submit {
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+
+	i.fa-search-green {
+		color: $__green;
+		font-size: 1rem;
+	}
+
+	i.fa-search-white {
+		color: white;
+		font-size: 1rem;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	label input.search-field-white {
+		color: white;
+		font-family: $font__accent;
+		font-size: 1.2rem;
+		&:focus{
+			color: white;
+		}
+
+	}
+
+	label input.search-field-green {
+		color: $__green;
+		font-family: $font__accent;
+		font-size: 1.2rem;
+		&:focus{
+			color: $__green;
+		}
+
+	}
+
+/* Page links in nav bar */
+	.main-navigation {
+		display: flex;
+		justify-content: flex-end;
+
+		ul {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		a {
+			margin: 0 10px;
+			text-transform: uppercase;
+			font-family: $font__accent;
+			color: $__green;
+		}
+	}
+
+	.white-nav-links a {
+		color: white;
+		text-shadow: 1px 1px 2px black;
+	}
+
+// hides site-header on home, about, adventure-single pages
+	.home .hfeed .site-header, 
+	.page-template-page-about .hfeed .site-header, 
+	.single-adventure .hfeed .site-header{
 		height: 0;
 	}
 
+// gets added on every other page but home, about, adventure single pages
 	.fixed-nav {
 		transition: 2s;
 		height: 50px;
@@ -211,6 +267,7 @@ a {
 		z-index: 1000;
 	}
 
+// gets added only home, about, adventure single pages
 	.front-about-nav {
 		transition: 2s;
 		height: 50px;
@@ -220,6 +277,7 @@ a {
 		z-index: 1000;
 	}
 
+// in js --> replaces .fixed-front-about-nav after screen height
 	.fixed-front-about-nav-scroll {
 		position: fixed;
 		background-color: rgba(255,255,255,1);
@@ -229,66 +287,9 @@ a {
 		z-index: 1000;
 	}
 
+// in js -- > gets added tp .fixed-nav to change background opacity
 	.fixed-nav-scroll {
 		transition: 2s;
 		background-color: rgba(255,255,255,0.8);
 	}
 
-	.page-link a {
-		color: white;
-	}
-
-//---------------------
-
-fieldset {
-	z-index: 5000;
-	padding: 0;
-	text-decoration: none;
-	border-style: none;
-}
-
-input.search-field {
-	border-style: none;
-	position: static;
-	right: 0;
-	background: none;
-	&:focus{
-		outline: none;
-	}
-}
-
-.search-field-white {
-	color: white;
-	&:focus{
-		color: white;
-	}
-
-}
-
-.search-field-green {
-	color: $__green;
-	&:focus{
-		color: $__green;
-	}
-
-}
-
-.search-form {
-	position: relative;
-}
-
-.search-submit {
-	border: none;
-	background: none;
-	box-shadow: none;
-}
-
-i.fa-search-green {
-	color: $__green;
-	font-size: 1rem;
-}
-
-i.fa-search-white {
-	color: white;
-	font-size: 1rem;
-}

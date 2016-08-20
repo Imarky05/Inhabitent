@@ -22,7 +22,7 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="<?php
-							if (is_front_page() || is_page_template('page-about.php')) {
+							if (is_front_page() || is_page_template('page-about.php') || is_singular('adventure')) {
 								echo "fixed-nav-wrapper front-about-nav";
 							}
 							else {
@@ -36,7 +36,7 @@
 							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 							<a href="<?php echo home_url()?>" class="logo-link">
 							<div class="nav-logo <?php
-								if (is_front_page() || is_page_template('page-about.php')) {
+								if (is_front_page() || is_page_template('page-about.php') || is_singular('adventure')) {
 									echo "front-about-logo white-logo";
 								}
 								else {
@@ -48,8 +48,8 @@
 						</div><!-- .site-branding -->
 
 						<nav id="site-navigation" class="main-navigation <?php
-								if (is_front_page() || is_page_template('page-about.php')) {
-									echo "front-about-main-nav page-link";
+								if (is_front_page() || is_page_template('page-about.php') || is_singular('adventure')) {
+									echo "front-about-main-nav white-nav-links";
 								}				
 							?>" 
 							role="navigation">

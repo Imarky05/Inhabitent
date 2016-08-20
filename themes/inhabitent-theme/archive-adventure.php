@@ -12,8 +12,8 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1>Latest Adventures</h1>
+			<header class="adventure-page-header">
+				<h1 class="adventure-page-title">Latest Adventures</h1>
 			</header><!-- .page-header -->
 
 			<div class="adventures-container">

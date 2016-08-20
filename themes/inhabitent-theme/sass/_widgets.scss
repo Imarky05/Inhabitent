@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .widget {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 3rem;
 
 	/* Make sure select elements fit in widgets. */
 	select {
@@ -17,7 +17,7 @@
 }
 
 div.widget-area {
-
+	padding-top: 40px;
 	border-left-style: solid;
 	border-width: 1px;
 	border-color: rgba(0,0,0,0.2);
@@ -41,11 +41,6 @@ div.widget-area {
 	.textwidget p{
 		display: flex;
 		align-items: center;
-	}
-
-	.textwidget, .business-info {
-		margin: 0;
-		padding: 10px 0;
 	}
 
 

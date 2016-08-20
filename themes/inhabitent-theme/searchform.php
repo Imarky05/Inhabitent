@@ -3,7 +3,7 @@
 		<button type="button" class="search-submit">
 			<span class="icon-search" aria-hidden="true">
 				<i class="fa fa-search <?php
-								if (is_front_page() || is_page_template('page-about.php')) {
+								if (is_front_page() || is_page_template('page-about.php') || is_singular('adventure')) {
 									echo "fp-fa-search fa-search-white";
 								}
 								else {
@@ -15,7 +15,7 @@
 		</button>
 		<label>
 			<input type="search" class="search-field <?php
-								if (is_front_page() || is_page_template('page-about.php')) {
+								if (is_front_page() || is_page_template('page-about.php') || is_singular('adventure')) {
 									echo "fp-search-field search-field-white";
 								}
 								else {

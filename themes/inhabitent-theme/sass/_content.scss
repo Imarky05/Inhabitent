@@ -52,27 +52,27 @@
 	padding: 40px 0 0 0;
 }
 
-//-----------
+// Main Page structuring
 
-.content-container {
-	display: flex;
-	justify-content: center;
-}
+	.content-container {
+		display: flex;
+		justify-content: center;
+	}
 
-.content-wrapper {
-	width: $fixed__width;
-	display: flex;
-}
+	.content-wrapper {
+		width: $fixed__width;
+		display: flex;
+	}
 
-.content-area {
-	flex: 3 0 67%;
-}
+	.content-area {
+		flex: 3 0 65%;
+	}
 
-.widget-area {
-	flex: 1 0 21%;
-	padding-left: 6%;
-	margin-left: 6%;
-}
+	.widget-area {
+		flex: 1 0 25%;
+		padding-left: 5%;
+		margin-left: 5%;
+	}
 
 .entry-header {
 	position: relative;
@@ -183,7 +183,7 @@
 		color: white;
 	}
 
-// comments
+// Comment Section
 
 	h2.comments-title {
 		text-transform: uppercase;
