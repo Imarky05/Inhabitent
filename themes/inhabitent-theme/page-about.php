@@ -2,7 +2,7 @@
 /**
  * The main template file.
  * Template Name: About Template
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>

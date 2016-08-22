@@ -307,4 +307,20 @@
 		}
 	}
 
+	.logged-in-as a {
+		padding: 10px 20px;
+		border: solid 0.5px black;
+		text-decoration: none;
+		transition: 1s;
+		color: black;
+		font-family: $font__accent;
+		text-transform: uppercase;
+		&:hover {
+			border-color: white;
+			transition: 1s;
+			color: white;
+			background-color: $__green;
+		}
+	}
+
 	
