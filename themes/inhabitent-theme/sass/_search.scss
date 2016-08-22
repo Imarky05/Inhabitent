@@ -2,7 +2,7 @@
 # Search
 --------------------------------------------------------------*/
 
-.search-page-title {
+.search-page-title, .page-title {
 	margin: 40px 0;
 	text-transform: uppercase;
 	font-size: 2.3rem;
@@ -33,4 +33,9 @@
 .search-meta {
 	font-family: $font__accent;
 	text-transform: uppercase;
+}
+
+
+.search .hfeed .site-content .content-container .content-wrapper .content-area .site-main .type-product {
+	width: 100%;
 }
