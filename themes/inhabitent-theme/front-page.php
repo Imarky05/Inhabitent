@@ -91,7 +91,7 @@ get_header(); ?>
 
 								<div class="fp-adventure-img">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail( large ); ?>
+									<?php the_post_thumbnail( 'large' ); ?>
 								<?php endif; ?>
 								<div class="overlay">
 								</div>
