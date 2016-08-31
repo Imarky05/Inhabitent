@@ -247,9 +247,9 @@ header.site-header {
 	}
 
 // hides site-header on home, about, adventure-single pages
-	.home .hfeed .site-header, 
-	.page-template-page-about .hfeed .site-header, 
-	.single-adventure .hfeed .site-header{
+	.home .site-header, 
+	.page-template-page-about .site-header, 
+	.single-adventure .site-header{
 		height: 0;
 	}
 

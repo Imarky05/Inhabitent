@@ -621,9 +621,9 @@ label input.search-field-green {
   color: white;
   text-shadow: 1px 1px 2px black; }
 
-.home .hfeed .site-header,
-.page-template-page-about .hfeed .site-header,
-.single-adventure .hfeed .site-header {
+.home .site-header,
+.page-template-page-about .site-header,
+.single-adventure .site-header {
   height: 0; }
 
 .fixed-nav {
@@ -1389,7 +1389,7 @@ object {
 .about-site-main {
   width: 100vw; }
 
-.page-template-page-about .hfeed .site-content .content-container .content-wrapper {
+.page-template-page-about .content-wrapper {
   width: 100vw; }
 
 .about-hero-banner {
@@ -1447,10 +1447,10 @@ object {
   -ms-flex-align: center;
       align-items: center; }
 
-.home .hfeed .site-content .content-container .content-wrapper {
+.home .content-wrapper {
   width: 100vw; }
 
-.home .hfeed .site-header .fixed-nav .nav-wrapper .main-navigation a {
+.home .main-navigation a {
   color: white; }
 
 .front-page-container {
@@ -1784,7 +1784,7 @@ object {
 .adventure-single-site-main {
   width: 100vw; }
 
-.single-adventure .hfeed .site-content .content-container .content-wrapper {
+.single-adventure .content-wrapper {
   width: 100vw; }
 
 .adventure-single-hero-banner {
@@ -1967,5 +1967,5 @@ div.copyright p {
 div.search-summary p {
   line-height: 1.5; }
 
-.search .hfeed .site-content .content-container .content-wrapper .content-area .site-main .type-product {
+.search .hfeed .type-product {
   width: 100%; }
