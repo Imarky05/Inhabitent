@@ -35,6 +35,10 @@
 	text-transform: uppercase;
 }
 
+.search-summary p {
+	line-height: $font__line-height-body;
+}
+
 
 .search .hfeed .site-content .content-container .content-wrapper .content-area .site-main .type-product {
 	width: 100%;

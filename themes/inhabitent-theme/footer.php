@@ -10,7 +10,7 @@
 			</div><!-- closing div for .content-container -->
 			</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+			<footer id="colophon" class="site-footer">
 				<div class="footer-container">
 					<div class="footer-info-wrapper">
 						<div class="contact-info">
@@ -41,8 +41,6 @@
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-		<!-- <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri() . "/./js/main.js"?>"></script> -->
 
 	</body>
 </html>

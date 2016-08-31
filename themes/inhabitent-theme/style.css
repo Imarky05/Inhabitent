@@ -589,14 +589,14 @@ i.fa-search-white {
 label input.search-field-white {
   color: white;
   font-family: "Novecento Sans Wide";
-  font-size: 1.2rem; }
+  font-size: 1rem; }
   label input.search-field-white:focus {
     color: white; }
 
 label input.search-field-green {
   color: #248A83;
   font-family: "Novecento Sans Wide";
-  font-size: 1.2rem; }
+  font-size: 1rem; }
   label input.search-field-green:focus {
     color: #248A83; }
 
@@ -789,7 +789,7 @@ h2.widget-title {
   font-size: 2.2rem; }
 
 .contact-page-content p {
-  line-height: 1.8rem;
+  line-height: 1.5;
   font-size: 1rem; }
 
 .contact-required {
@@ -929,6 +929,10 @@ div.comment-metadata a {
   div.comment-metadata a:hover {
     color: #2f1339; }
 
+#gmap_canvas img {
+  max-width: none !important;
+  background: none !important; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1013,7 +1017,7 @@ div.comment-metadata a {
     background-color: rgba(36, 138, 131, 0.8);
     transform: scale(1.1); }
 
-.entry-title a, h1.entry-title {
+.entry-title a, h2.entry-title {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -1047,7 +1051,7 @@ div.comment-metadata a {
     border-color: white; }
 
 div.entry-content p span {
-  line-height: 1.6rem; }
+  line-height: 1.5; }
 
 .cat-links, .tags-links {
   font-family: "Novecento Sans Wide";
@@ -1363,7 +1367,7 @@ object {
   .single-product-site-main .type-product .single-product-content {
     -ms-flex: 0 1 48%;
         flex: 0 1 48%; }
-    .single-product-site-main .type-product .single-product-content h1 {
+    .single-product-site-main .type-product .single-product-content h2 {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 2.5rem;
@@ -1376,7 +1380,7 @@ object {
     font-weight: normal;
     font-size: 2rem; }
   .single-product-site-main .type-product p span {
-    line-height: 1.8rem;
+    line-height: 1.5;
     font-size: 1rem; }
 
 /*--------------------------------------------------------------
@@ -1592,20 +1596,13 @@ object {
   color: white;
   font-size: 0.9rem;
   background: #248A83;
-  border: 0;
-  border-radius: 0;
   font-family: "Novecento Sans Wide";
   text-transform: uppercase;
-  padding: 15px 30px;
-  box-shadow: none;
-  text-shadow: none; }
-  .fp-product-button a {
-    text-decoration: none;
-    color: white; }
+  padding: 10px 25px;
+  text-decoration: none; }
   .fp-product-button:hover {
     transition: 0.5s;
-    background: #19625d;
-    box-shadow: none; }
+    background: #19625d; }
 
 .fp-adventure-section {
   margin-bottom: 50px;
@@ -1832,7 +1829,7 @@ object {
 .adventure-single-content {
   font-size: 1rem; }
   .adventure-single-content p span {
-    line-height: 1.7rem; }
+    line-height: 1.5; }
 
 /*--------------------------------------------------------------
 # Page Templates
@@ -1966,6 +1963,9 @@ div.copyright p {
 .search-meta {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase; }
+
+.search-summary p {
+  line-height: 1.5; }
 
 .search .hfeed .site-content .content-container .content-wrapper .content-area .site-main .type-product {
   width: 100%; }

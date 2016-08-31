@@ -103,7 +103,7 @@
 		}
 		.single-product-content{
 			flex: 0 1 48%;
-			h1 {
+			h2 {
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				font-size: 2.5rem;
@@ -119,7 +119,7 @@
 			font-size:	2rem;
 		}
 		p span {
-			line-height: 1.8rem;
+			line-height: $font__line-height-body;
 			font-size: 1rem;
 		}
 	}

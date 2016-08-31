@@ -180,21 +180,13 @@
 			color: white;
 			font-size: 0.9rem;
 			background: $__green;
-			border: 0;
-			border-radius: 0;
 			font-family: $font__accent;
 			text-transform: uppercase;
-			padding: 15px 30px;
-			box-shadow: none;
-			text-shadow: none;
-			a {
-				text-decoration: none;
-				color: white;
-			}
+			padding: 10px 25px;
+			text-decoration: none;
 			&:hover {
 				transition: 0.5s;
 				background: darken($__green, 10%);
-				box-shadow: none;
 			}
 			
 		}

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 		<div id="primary" class="content-area">
-			<main id="main" class="site-main single-product-site-main" role="main">
+			<main id="main" class="site-main single-product-site-main">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,8 +17,8 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 					<div class="single-product-content">
-						<?php the_title( '<h1 class="single-product-title">', '</h1>' ); ?>
-						<h2 class="single-product-price"><?php echo CFS()->get( 'price' ); ?></h2>
+						<?php the_title( '<h2 class="single-product-title">', '</h2>' ); ?>
+						<h3 class="single-product-price"><?php echo CFS()->get( 'price' ); ?></h3>
 						<?php the_content(); ?>
 						<div class="entry-social-media">
 							<span><a href="#"><i class="fa fa-facebook"></i>Like</a></span>

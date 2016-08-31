@@ -13,7 +13,7 @@
 	font-size: 2.2rem;
 }
 .contact-page-content p {
-	line-height: 1.8rem;
+	line-height: $font__line-height-body;
 	font-size: 1rem;
 }
 
@@ -174,3 +174,6 @@ h2.comments-title {
 			color: $__purple;
 		}
 	}
+
+	// google maps styles
+	#gmap_canvas img{max-width:none!important;background:none!important;}

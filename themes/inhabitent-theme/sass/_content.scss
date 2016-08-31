@@ -97,7 +97,7 @@
 	}
 }
 
-.entry-title a, h1.entry-title{
+.entry-title a, h2.entry-title{
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
@@ -137,7 +137,7 @@
 // single page content
 
 	div.entry-content p span {
-		line-height: 1.6rem;
+		line-height: $font__line-height-body;
 	}
 
 	.cat-links, .tags-links {

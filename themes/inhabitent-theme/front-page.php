@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main front-site-main" role="main">
+		<main id="main" class="site-main front-site-main">
 
 		<div class="hero-banner">
 			<img src="<?php echo get_template_directory_uri() . "/images/logos/inhabitent-logo-full.svg"?>" alt="">
@@ -32,11 +32,9 @@ get_header(); ?>
 								<li>
 									<img src="<?php echo get_template_directory_uri() . "/images/product-type-icons/".$term->slug.".svg"?>" alt="">
 									<p><?php echo $term->description ?></p>
-									<button class="fp-product-button">
-										<a href="<?php echo get_term_link($term); ?>">
+										<a class="fp-product-button" href="<?php echo get_term_link($term); ?>">
 											<?php echo $term->name. ' Stuff' ?>
 										</a>
-									</button>
 								</li>
 							<?php endforeach; ?>
 						</ul>

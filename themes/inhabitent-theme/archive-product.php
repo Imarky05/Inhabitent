@@ -7,7 +7,7 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header-product">
@@ -32,6 +32,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<h2 class="screen-reader-text"><?php the_title(); ?></h2>
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="product-img-wrapper">
 								<a href="<?php echo get_permalink() ?>">
