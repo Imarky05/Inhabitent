@@ -1,0 +1,21 @@
+// Main Page structuring
+
+	.content-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.content-wrapper {
+		width: $fixed__width;
+		display: flex;
+	}
+
+	.content-area {
+		flex: 3 0 65%;
+	}
+
+	.widget-area {
+		flex: 1 0 25%;
+		padding-left: 5%;
+		margin-left: 5%;
+	}

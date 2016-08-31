@@ -219,6 +219,27 @@ td,
 th {
   padding: 0; }
 
+.content-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.content-wrapper {
+  width: 1120px;
+  display: -ms-flexbox;
+  display: flex; }
+
+.content-area {
+  -ms-flex: 3 0 65%;
+      flex: 3 0 65%; }
+
+.widget-area {
+  -ms-flex: 1 0 25%;
+      flex: 1 0 25%;
+  padding-left: 5%;
+  margin-left: 5%; }
+
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
@@ -777,7 +798,7 @@ h2.widget-title {
         color: #2f1339; }
 
 /*--------------------------------------------------------------
-# Contact
+# Contact/Find Us
 --------------------------------------------------------------*/
 .contact-page-title {
   text-transform: uppercase;
@@ -973,27 +994,6 @@ div.comment-metadata a {
 
 .type-post {
   padding: 40px 0 0 0; }
-
-.content-container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
-
-.content-wrapper {
-  width: 1120px;
-  display: -ms-flexbox;
-  display: flex; }
-
-.content-area {
-  -ms-flex: 3 0 65%;
-      flex: 3 0 65%; }
-
-.widget-area {
-  -ms-flex: 1 0 25%;
-      flex: 1 0 25%;
-  padding-left: 5%;
-  margin-left: 5%; }
 
 .entry-header {
   position: relative;
