@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	// nav bar fading front about adventure
 	window.onscroll = function() {
-			    if (window.scrollY > window.screen.height) {
+			    if (window.scrollY > window.innerHeight) {
 			    	$("div.front-about-nav").addClass("fixed-front-about-nav-scroll");
 			    	$(".front-about-main-nav").removeClass("white-nav-links");
 			    	$(".front-about-logo").removeClass("white-logo").addClass("green-logo");
