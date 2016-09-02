@@ -895,14 +895,23 @@ h2.widget-title {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.page-id-22 .comment-form-comment, .page-id-22 .comment-form-author, .page-id-22 .comment-form-email, .page-id-22 .comment-form-url {
+.page-id-22 .comment-form-comment,
+.page-id-22 .comment-form-author,
+.page-id-22 .comment-form-email,
+.page-id-22 .comment-form-url {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap; }
-  .page-id-22 .comment-form-comment input, .page-id-22 .comment-form-comment textarea, .page-id-22 .comment-form-author input, .page-id-22 .comment-form-author textarea, .page-id-22 .comment-form-email input, .page-id-22 .comment-form-email textarea, .page-id-22 .comment-form-url input, .page-id-22 .comment-form-url textarea {
+  .page-id-22 .comment-form-comment input, .page-id-22 .comment-form-comment textarea,
+  .page-id-22 .comment-form-author input,
+  .page-id-22 .comment-form-author textarea,
+  .page-id-22 .comment-form-email input,
+  .page-id-22 .comment-form-email textarea,
+  .page-id-22 .comment-form-url input,
+  .page-id-22 .comment-form-url textarea {
     background-color: rgba(150, 150, 150, 0.1);
     border-radius: 0;
     margin: 10px 0; }
