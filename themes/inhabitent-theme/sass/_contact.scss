@@ -2,178 +2,195 @@
 # Contact/Find Us
 --------------------------------------------------------------*/
 
-.contact-page-title  {
-	text-transform: uppercase;
-	font-size: 2.5rem;
-	margin: 50px 0;
-}
+.page-id-22 {
 
-.contact-page-content h2, .contact-page-email-title {
-	text-transform: uppercase;
-	font-size: 2.2rem;
-}
-.contact-page-content p {
-	line-height: $font__line-height-body;
-	font-size: 1rem;
-}
-
-.contact-required{
-	color: red;
-}
-
-.contact-name, .contact-email, .contact-subject, .contact-message {
-	font-family: $font__accent;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-
-}
-
-.contact-textbox {
-	margin: 10px 0;
-	background-color: rgba(150,150,150,0.1);
-	border-radius: 0!important;
-	border-color: rgba(150,150,150,0.2)!important;
-}
-
-input.contact-submit {
-	transition: 1s;
-	color: white;
-	font-size: 0.9rem;
-	background: $__green;
-	border: 0;
-	border-radius: 0;
-	font-family: $font__accent;
-	text-transform: uppercase;
-	padding: 15px 30px;
-	box-shadow: none;
-	text-shadow: none;
-	&:hover {
-		transition: 0.5s;
-		background: darken($__green, 10%);
-		box-shadow: none;
-	}
-}
-
-h2.comments-title {
-		text-transform: uppercase;
-		font-size: 2.2rem; 
-	}
-
-	ol.comment-list {
-		margin: 0;
-		padding: 0;
-	}
-
-	.comment-body {
-		display: flex;
-		padding: 25px 0;
-		border-bottom: solid 1px rgba(0,0,0,0.1);
-	}
-
-	img.avatar {
-		border-radius: 50%;
-	}
-
-	.comment-content {
-		padding-left: 20px;
-
-	}
-
-	a.comment-reply-link {
+	.entry-title  {
+		transition: 1s;
 		text-decoration: none;
-		color: $__green;
+		position: static;
+		padding: 0;
+
 		&:hover {
-			color: $__purple;
+			transform: scale(1);// cancel out entry-title styles
+		}
+
+		text-transform: uppercase;
+		font-size: 2.5rem;
+		margin: 50px 0;
+	}
+
+	.entry-content	{
+		h2{
+			text-transform: uppercase;
+			font-size: 2.2rem;
+		}
+		p {
+			line-height: $font__line-height-body;
+			font-size: 1rem;
 		}
 	}
 
-	cite.fn {
-		font-weight: bold;
-	}
 
-	.comment-reply-title {
-		text-transform: uppercase;
-		font-size: 1.8rem;
-		letter-spacing: 0.2rem;
-		margin: 20px 0;
-	}
 
-	.comment-form {
-		display: flex;
-		width: auto;
-		flex-flow: row wrap;
-		justify-content: space-between;
-	}
-
-	.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
-		font-family: $font__accent;
-		text-transform: uppercase;
-		display: flex;
-		flex-flow: column nowrap;
-		input, textarea {
-			background-color: rgba(150,150,150,0.1);
-			border-radius: 0;
-			margin: 10px 0;
-		}
-	}
-
-	.required {
+	.contact-required{
 		color: red;
 	}
 
-	.comment-notes {
-		flex: 2 0 100%;	
+	.contact-name, .contact-email, .contact-subject, .contact-message {
+		font-family: $font__accent;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+
+	}
+
+	.contact-textbox {
 		margin: 10px 0;
-
+		background-color: rgba(150,150,150,0.1);
+		border-radius: 0!important;
+		border-color: rgba(150,150,150,0.2)!important;
 	}
 
-	.comment-form-comment {
-		flex: 2 0 100%;
-	}
-
-	.comment-form-author {
-		flex: 1 0 50%;
-		input {
-			margin-right: 15px;
+	input.contact-submit {
+		transition: 1s;
+		color: white;
+		font-size: 0.9rem;
+		background: $__green;
+		border: 0;
+		border-radius: 0;
+		font-family: $font__accent;
+		text-transform: uppercase;
+		padding: 15px 30px;
+		box-shadow: none;
+		text-shadow: none;
+		&:hover {
+			transition: 0.5s;
+			background: darken($__green, 10%);
+			box-shadow: none;
 		}
 	}
 
-	.comment-form-email {
-		flex: 1 0 50%;
-	}
-
-	.comment-form-url {
-		flex: 2 0 100%;
-	}
-
-	.form-submit {
-		margin-top: 0;
-		input.submit {
-			transition: 1s;
-			color: white;
-			font-size: 0.9rem;
-			background: $__green;
-			border: 0;
-			border-radius: 0;
-			font-family: $font__accent;
+	h2.comments-title {
 			text-transform: uppercase;
-			padding: 15px 30px;
-			box-shadow: none;
-			text-shadow: none;
+			font-size: 2.2rem; 
+		}
+
+		ol.comment-list {
+			margin: 0;
+			padding: 0;
+		}
+
+		.comment-body {
+			display: flex;
+			padding: 25px 0;
+			border-bottom: solid 1px rgba(0,0,0,0.1);
+		}
+
+		img.avatar {
+			border-radius: 50%;
+		}
+
+		.comment-content {
+			padding-left: 20px;
+
+		}
+
+		a.comment-reply-link {
+			text-decoration: none;
+			color: $__green;
 			&:hover {
-				transition: 0.5s;
-				background: darken($__green, 10%);
+				color: $__purple;
 			}
 		}
-	}
 
-	div.comment-metadata a {
-		text-decoration: none;
-		color: $__green;
-		&:hover {
-			color: $__purple;
+		cite.fn {
+			font-weight: bold;
 		}
-	}
 
-	// google maps styles
-	#gmap_canvas img{max-width:none!important;background:none!important;}
+		.comment-reply-title {
+			text-transform: uppercase;
+			font-size: 1.8rem;
+			letter-spacing: 0.2rem;
+			margin: 20px 0;
+		}
+
+		.comment-form {
+			display: flex;
+			width: auto;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+
+		.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
+			font-family: $font__accent;
+			text-transform: uppercase;
+			display: flex;
+			flex-flow: column nowrap;
+			input, textarea {
+				background-color: rgba(150,150,150,0.1);
+				border-radius: 0;
+				margin: 10px 0;
+			}
+		}
+
+		.required {
+			color: red;
+		}
+
+		.comment-notes {
+			flex: 2 0 100%;	
+			margin: 10px 0;
+
+		}
+
+		.comment-form-comment {
+			flex: 2 0 100%;
+		}
+
+		.comment-form-author {
+			flex: 1 0 50%;
+			input {
+				margin-right: 15px;
+			}
+		}
+
+		.comment-form-email {
+			flex: 1 0 50%;
+		}
+
+		.comment-form-url {
+			flex: 2 0 100%;
+		}
+
+		.form-submit {
+			margin-top: 0;
+			input.submit {
+				transition: 1s;
+				color: white;
+				font-size: 0.9rem;
+				background: $__green;
+				border: 0;
+				border-radius: 0;
+				font-family: $font__accent;
+				text-transform: uppercase;
+				padding: 15px 30px;
+				box-shadow: none;
+				text-shadow: none;
+				&:hover {
+					transition: 0.5s;
+					background: darken($__green, 10%);
+				}
+			}
+		}
+
+		div.comment-metadata a {
+			text-decoration: none;
+			color: $__green;
+			&:hover {
+				color: $__purple;
+			}
+		}
+
+		// google maps styles
+		#gmap_canvas img{max-width:none!important;background:none!important;}
+
+}
