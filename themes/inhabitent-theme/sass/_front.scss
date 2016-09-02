@@ -2,6 +2,14 @@
 # Front-page
 --------------------------------------------------------------*/
 
+@mixin section-title{
+	margin: 70px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	letter-spacing: 3px;
+}
+
 	// front page main
 
 		.front-site-main {
@@ -45,11 +53,7 @@
 			align-items: center;
 
 			h2 {
-				margin: 70px;
-				font-weight: normal;
-				text-transform: uppercase;
-				font-size: 2.5rem;
-				letter-spacing: 3px;
+				@include section-title;
 			}
 		}
 
@@ -84,42 +88,27 @@
 			border-top-width: 5px;
 			.front-meta{
 				font-size: 13px;
-
 			}
 			.front-title {
 				margin-top: 5px;
-			a {
-				line-height: 1rem;
-				letter-spacing: 1px;
-				text-decoration: none;
-				font-family: $font__accent;
-				text-transform: uppercase;
-				font-size: 1.4rem;
-				color: $__green;
-				font-weight: bold;
-				&:hover {
-					color: $__purple;
+				a {
+					line-height: 1rem;
+					letter-spacing: 1px;
+					text-decoration: none;
+					font-family: $font__accent;
+					text-transform: uppercase;
+					font-size: 1.4rem;
+					color: $__green;
+					font-weight: bold;
+					&:hover {
+						color: $__purple;
+					}
 				}
-			}
 			}
 		}
 
 		.fp-journal-read-more a {
-			transition: 0.5s;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: black;
-			padding: 10px 20px;
-			margin: 10px 0;
-			border: solid 0.5px black;
-			font-size: 0.8rem;
-			font-family: $font__accent;
-			&:hover {
-				transition: 0.5s;
-				color: white;
-				background-color: lighten($__green, 20%);
-				border-color: white;
-			}
+			@include black-read-more;
 		}
 
 	// front page product section
@@ -130,11 +119,7 @@
 			justify-content: center;
 			align-items: center;
 			h2 {
-				letter-spacing: 3px;
-				margin: 70px;
-				font-size: 2.5rem;
-				font-weight: normal;
-				text-transform: uppercase;
+				@include section-title;
 			}
 
 				ul {
@@ -184,7 +169,6 @@
 				transition: 0.5s;
 				background: darken($__green, 10%);
 			}
-			
 		}
 
 	// front page Latest Adventures
@@ -198,11 +182,7 @@
 			align-items: center;
 
 			h2 {
-				margin: 70px;
-				font-weight: normal;
-				text-transform: uppercase;
-				font-size: 2.5rem;
-				letter-spacing: 3px;
+				@include section-title;
 			}
 			ul {
 				width: $fixed__width;
@@ -252,7 +232,7 @@
 			}
 		}
 
-		.fp-adventure-read-more {
+		.fp-more-adventure {
 			margin: 10px;
 			transition: 1s;
 			color: white;

@@ -220,6 +220,11 @@ td,
 th {
   padding: 0; }
 
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem; }
+
 .content-container {
   display: -ms-flexbox;
   display: flex;
@@ -438,6 +443,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+  font-family: "Merri Weather";
   color: #666;
   border: 1px solid #ccc; }
   input[type="text"]:focus,
@@ -453,7 +459,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 8px 3px; }
 
 textarea {
   padding-left: 3px;
@@ -802,12 +808,8 @@ h2.widget-title {
 # Contact/Find Us
 --------------------------------------------------------------*/
 .page-id-22 .entry-title {
-  transition: 1s;
-  text-decoration: none;
   position: static;
   padding: 0;
-  text-transform: uppercase;
-  font-size: 2.5rem;
   margin: 50px 0; }
   .page-id-22 .entry-title:hover {
     transform: scale(1); }
@@ -829,13 +831,12 @@ h2.widget-title {
 .page-id-22 .contact-message {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase;
-  font-size: 1.2rem; }
+  font-size: 1.1rem; }
 
 .page-id-22 .contact-textbox {
   background-color: rgba(150, 150, 150, 0.1);
   border-radius: 0;
-  margin: 10px 0;
-  padding: 10px 3px; }
+  margin: 10px 0; }
 
 .page-id-22 input.contact-submit {
   transition: 1s;
@@ -917,8 +918,7 @@ h2.widget-title {
   .page-id-22 .comment-form-url textarea {
     background-color: rgba(150, 150, 150, 0.1);
     border-radius: 0;
-    margin: 10px 0;
-    padding: 10px 3px; }
+    margin: 10px 0; }
 
 .page-id-22 .required {
   color: red; }
@@ -1035,7 +1035,7 @@ h2.widget-title {
   .entry-title:hover {
     transition: 0.5s;
     background-color: rgba(36, 138, 131, 0.8);
-    transform: scale(1.1); }
+    transform: scale(1.02); }
 
 .entry-title a, h2.entry-title {
   text-decoration: none;
@@ -1061,6 +1061,7 @@ h2.widget-title {
   text-transform: uppercase;
   color: black;
   padding: 10px 20px;
+  margin: 10px 0;
   border: solid 0.5px black;
   font-size: 0.8rem;
   font-family: "Novecento Sans Wide"; }
@@ -1156,12 +1157,17 @@ cite.fn {
 .comment-form-author,
 .comment-form-email,
 .comment-form-url {
-  font-family: "Novecento Sans Wide";
-  text-transform: uppercase;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap; }
+  .comment-form-comment label,
+  .comment-form-author label,
+  .comment-form-email label,
+  .comment-form-url label {
+    font-family: "Novecento Sans Wide";
+    text-transform: uppercase;
+    font-size: 1.1rem; }
   .comment-form-comment input, .comment-form-comment textarea,
   .comment-form-author input,
   .comment-form-author textarea,
@@ -1171,8 +1177,7 @@ cite.fn {
   .comment-form-url textarea {
     background-color: rgba(150, 150, 150, 0.1);
     border-radius: 0;
-    margin: 10px 0;
-    padding: 10px 3px; }
+    margin: 10px 0; }
 
 .required {
   color: red; }
@@ -1329,10 +1334,7 @@ object {
   padding: 40px;
   border-bottom: dashed 1px rgba(0, 0, 0, 0.3); }
   .page-header-product h1 {
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2.5rem; }
+    margin: 0 0 20px 0; }
 
 .product-category-container a {
   text-decoration: none;
@@ -1429,7 +1431,6 @@ object {
   -ms-flex-align: center;
       align-items: center; }
   .about-hero-banner h1 {
-    text-transform: uppercase;
     color: white;
     font-size: 3.2rem; }
 
@@ -1579,11 +1580,11 @@ object {
   -ms-flex-align: center;
       align-items: center; }
   .fp-product-wrapper h2 {
-    letter-spacing: 3px;
     margin: 70px;
-    font-size: 2.5rem;
     font-weight: normal;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 3px; }
   .fp-product-wrapper ul {
     margin: 0;
     padding: 0;
@@ -1685,7 +1686,7 @@ object {
         height: 280px;
         width: 280px; }
 
-.fp-adventure-read-more {
+.fp-more-adventure {
   margin: 10px;
   transition: 1s;
   color: white;
@@ -1700,7 +1701,7 @@ object {
   text-shadow: none;
   text-decoration: none;
   color: white; }
-  .fp-adventure-read-more:hover {
+  .fp-more-adventure:hover {
     transition: 0.5s;
     background: #19625d;
     box-shadow: none; }

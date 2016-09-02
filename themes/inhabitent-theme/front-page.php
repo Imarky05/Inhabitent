@@ -99,7 +99,7 @@ get_header(); ?>
 						<?php endwhile; wp_reset_postdata();?>
 						</ul>
 
-						<p><a href="<?php echo get_post_type_archive_link( 'adventure' ) ?>" class="fp-adventure-read-more">More Adventures</a></p>
+						<p><a href="<?php echo get_post_type_archive_link( 'adventure' ) ?>" class="fp-more-adventure">More Adventures</a></p>
 
 					</div>
 				</div>

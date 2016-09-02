@@ -16,5 +16,46 @@
 	background-color: rgba(150,150,150,0.1);
 	border-radius: 0;
 	margin: 10px 0;
-	padding: 10px 3px;
+}
+
+@mixin label {
+	font-family: $font__accent;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+}
+
+@mixin black-read-more {
+	transition: 0.5s;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	padding: 10px 20px;
+	margin: 10px 0;
+	border: solid 0.5px black;
+	font-size: 0.8rem;
+	font-family: $font__accent;
+	&:hover {
+		transition: 0.5s;
+		color: white;
+		background-color: lighten($__green, 20%);
+		border-color: white;
+	}
+}
+
+@mixin white-read-more {
+	margin: 20px;
+	transition: 0.5s;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 10px 20px;
+	border: solid 0.5px white;
+	font-size: 0.8rem;
+	font-family: $font__accent;
+	&:hover {
+		transition: 0.5s;
+		color: white;
+		background-color: darken($__green, 10%);
+		border-color: rgba(0,0,0,0);
+	}
 }

@@ -52,21 +52,7 @@
 }
 
 .adventure-read-more {
-	margin: 20px;
-	transition: 0.5s;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: white;
-	padding: 10px 20px;
-	border: solid 0.5px white;
-	font-size: 0.8rem;
-	font-family: $font__accent;
-	&:hover {
-		transition: 0.5s;
-		color: white;
-		background-color: darken($__green, 10%);
-		border-color: rgba(0,0,0,0);
-	}
+	@include white-read-more;
 }
 
 .adventure-page-title {

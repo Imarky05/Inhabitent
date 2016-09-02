@@ -71,7 +71,7 @@
 	&:hover {
 		transition: 0.5s;
 		background-color: transparentize($__green, 0.2);
-		transform: scale(1.1);
+		transform: scale(1.02);
 	}
 }
 
@@ -96,20 +96,7 @@
 }
 
 .read-more {
-	transition: 0.5s;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: black;
-	padding: 10px 20px;
-	border: solid 0.5px black;
-	font-size: 0.8rem;
-	font-family: $font__accent;
-	&:hover {
-		transition: 0.5s;
-		color: white;
-		background-color: lighten($__green, 20%);
-		border-color: white;
-	}
+	@include black-read-more;
 }
 
 // single page content
@@ -218,10 +205,13 @@
 	.comment-form-author, 
 	.comment-form-email, 
 	.comment-form-url {
-		font-family: $font__accent;
-		text-transform: uppercase;
 		display: flex;
 		flex-flow: column nowrap;
+
+		label {
+			@include label;
+		}
+		
 		input, textarea {
 			@include input-box;
 		}
