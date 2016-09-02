@@ -177,9 +177,6 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input {
-  line-height: normal; }
-
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -199,8 +196,7 @@ input[type="search"]::-webkit-search-decoration {
 
 fieldset {
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  margin: 0 2px; }
 
 legend {
   border: 0;
@@ -419,8 +415,7 @@ input[type="submit"] {
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em; }
+  line-height: 1; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -583,8 +578,8 @@ a:hover, a:active {
 
 /* Search Form in the Nav Bar */
 fieldset {
-  z-index: 5000;
   padding: 0;
+  z-index: 5000;
   text-decoration: none;
   border-style: none; }
 
@@ -592,7 +587,6 @@ input.search-field {
   display: none;
   border-style: none;
   position: static;
-  right: 0;
   background: none; }
   input.search-field:focus {
     outline: none; }
@@ -617,14 +611,14 @@ i.fa-search-white {
 label input.search-field-white {
   color: white;
   font-family: "Novecento Sans Wide";
-  font-size: 1rem; }
+  font-size: 1.1rem; }
   label input.search-field-white:focus {
     color: white; }
 
 label input.search-field-green {
   color: #248A83;
   font-family: "Novecento Sans Wide";
-  font-size: 1rem; }
+  font-size: 1.1rem; }
   label input.search-field-green:focus {
     color: #248A83; }
 

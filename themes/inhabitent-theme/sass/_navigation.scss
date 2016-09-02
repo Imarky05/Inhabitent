@@ -165,8 +165,8 @@ header.site-header {
 /* Search Form in the Nav Bar */
 
 	fieldset {
-		z-index: 5000;
 		padding: 0;
+		z-index: 5000;
 		text-decoration: none;
 		border-style: none;
 	}
@@ -175,7 +175,6 @@ header.site-header {
 		display: none;
 		border-style: none;
 		position: static;
-		right: 0;
 		background: none;
 		&:focus{
 			outline: none;
@@ -206,7 +205,7 @@ header.site-header {
 	label input.search-field-white {
 		color: white;
 		font-family: $font__accent;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		&:focus{
 			color: white;
 		}
@@ -216,7 +215,7 @@ header.site-header {
 	label input.search-field-green {
 		color: $__green;
 		font-family: $font__accent;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		&:focus{
 			color: $__green;
 		}
