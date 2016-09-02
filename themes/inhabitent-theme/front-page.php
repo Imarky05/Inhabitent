@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="front-page-wrapper">
 				<div class="fp-product-section">
 					<div class="fp-product-wrapper">
-						<h1>Shop Stuff</h1>
+						<h2>Shop Stuff</h2>
 						<ul>
 							<?php $args = array(
 								'taxonomy' => 'product-type',
@@ -42,7 +42,7 @@ get_header(); ?>
 				</div>
 
 				<div class="fp-journal-section">
-					<h1>Inhabitent Journal</h1>
+					<h2>Inhabitent Journal</h2>
 					<div class="fp-journal-post-wrapper">
 						<?php $args = array('posts_per_page' => 3); // exclude category 9?> 
 						<?php $blog_posts = get_posts($args); ?>
@@ -70,7 +70,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="fp-adventure-section">
-					<h1>Latest Adventures</h1>
+					<h2>Latest Adventures</h2>
 					<div class="fp-adventure-wrapper">
 						<?php 
 							$args = array('post_type' => 'adventure');
@@ -81,8 +81,8 @@ get_header(); ?>
 							<li>
 								<div class="adventure-content">
 
-								<h2 class="fp-adventure-title"><a href="<?php echo get_permalink() ?>">
-								<?php the_title(); ?></a></h2>
+								<h3 class="fp-adventure-title"><a href="<?php echo get_permalink() ?>">
+								<?php the_title(); ?></a></h3>
 								<p><a href="<?php echo get_permalink() ?>" class="adventure-read-more">Read more &rarr;</a></p>
 
 								</div>

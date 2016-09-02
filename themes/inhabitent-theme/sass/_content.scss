@@ -214,16 +214,16 @@
 		justify-content: space-between;
 	}
 
-	.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
+	.comment-form-comment, 
+	.comment-form-author, 
+	.comment-form-email, 
+	.comment-form-url {
 		font-family: $font__accent;
 		text-transform: uppercase;
 		display: flex;
 		flex-flow: column nowrap;
 		input, textarea {
-			border-color: rgba(150,150,150,0.2)!important;
-			background-color: rgba(150,150,150,0.1);
-			border-radius: 0;
-			margin: 10px 0;
+			@include input-box;
 		}
 	}
 

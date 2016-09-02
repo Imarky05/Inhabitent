@@ -823,16 +823,19 @@ h2.widget-title {
 .page-id-22 .contact-required {
   color: red; }
 
-.page-id-22 .contact-name, .page-id-22 .contact-email, .page-id-22 .contact-subject, .page-id-22 .contact-message {
+.page-id-22 .contact-name,
+.page-id-22 .contact-email,
+.page-id-22 .contact-subject,
+.page-id-22 .contact-message {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase;
   font-size: 1.2rem; }
 
 .page-id-22 .contact-textbox {
-  margin: 10px 0;
   background-color: rgba(150, 150, 150, 0.1);
-  border-radius: 0 !important;
-  border-color: rgba(150, 150, 150, 0.2) !important; }
+  border-radius: 0;
+  margin: 10px 0;
+  padding: 10px 3px; }
 
 .page-id-22 input.contact-submit {
   transition: 1s;
@@ -914,7 +917,8 @@ h2.widget-title {
   .page-id-22 .comment-form-url textarea {
     background-color: rgba(150, 150, 150, 0.1);
     border-radius: 0;
-    margin: 10px 0; }
+    margin: 10px 0;
+    padding: 10px 3px; }
 
 .page-id-22 .required {
   color: red; }
@@ -1148,18 +1152,27 @@ cite.fn {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
   font-family: "Novecento Sans Wide";
   text-transform: uppercase;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap; }
-  .comment-form-comment input, .comment-form-comment textarea, .comment-form-author input, .comment-form-author textarea, .comment-form-email input, .comment-form-email textarea, .comment-form-url input, .comment-form-url textarea {
-    border-color: rgba(150, 150, 150, 0.2) !important;
+  .comment-form-comment input, .comment-form-comment textarea,
+  .comment-form-author input,
+  .comment-form-author textarea,
+  .comment-form-email input,
+  .comment-form-email textarea,
+  .comment-form-url input,
+  .comment-form-url textarea {
     background-color: rgba(150, 150, 150, 0.1);
     border-radius: 0;
-    margin: 10px 0; }
+    margin: 10px 0;
+    padding: 10px 3px; }
 
 .required {
   color: red; }
@@ -1486,7 +1499,7 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .fp-journal-section h1 {
+  .fp-journal-section h2 {
     margin: 70px;
     font-weight: normal;
     text-transform: uppercase;
@@ -1565,7 +1578,7 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .fp-product-wrapper h1 {
+  .fp-product-wrapper h2 {
     letter-spacing: 3px;
     margin: 70px;
     font-size: 2.5rem;
@@ -1627,7 +1640,7 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .fp-adventure-section h1 {
+  .fp-adventure-section h2 {
     margin: 70px;
     font-weight: normal;
     text-transform: uppercase;
@@ -1876,7 +1889,9 @@ object {
   -ms-flex-align: start;
       align-items: flex-start; }
 
-.contact-info, .business-info, .logo-info {
+.contact-info,
+.business-info,
+.logo-info {
   margin-top: 30px; }
 
 .contact-info {
@@ -1933,17 +1948,21 @@ div.copyright p {
   letter-spacing: 2px;
   line-height: 1.2; }
 
-.widget_recent_entries h2, .widget_categories h2 {
+.widget_recent_entries h2,
+.widget_categories h2 {
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-.widget_recent_entries ul, .widget_categories ul {
+.widget_recent_entries ul,
+.widget_categories ul {
   list-style: none;
   padding: 0; }
-  .widget_recent_entries ul li a, .widget_categories ul li a {
+  .widget_recent_entries ul li a,
+  .widget_categories ul li a {
     text-decoration: none;
     color: #248A83; }
-    .widget_recent_entries ul li a:hover, .widget_categories ul li a:hover {
+    .widget_recent_entries ul li a:hover,
+    .widget_categories ul li a:hover {
       color: #2f1339; }
 
 /*--------------------------------------------------------------
