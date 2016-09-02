@@ -263,6 +263,7 @@
 			&:hover {
 				transition: 0.5s;
 				background: darken($__green, 10%);
+				box-shadow: none;
 			}
 		}
 	}

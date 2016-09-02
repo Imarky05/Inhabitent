@@ -940,24 +940,6 @@ h2.widget-title {
   -ms-flex: 2 0 100%;
       flex: 2 0 100%; }
 
-.page-id-22 .form-submit {
-  margin-top: 0; }
-  .page-id-22 .form-submit input.submit {
-    transition: 1s;
-    color: white;
-    font-size: 0.9rem;
-    background: #248A83;
-    border: 0;
-    border-radius: 0;
-    font-family: "Novecento Sans Wide";
-    text-transform: uppercase;
-    padding: 15px 30px;
-    box-shadow: none;
-    text-shadow: none; }
-    .page-id-22 .form-submit input.submit:hover {
-      transition: 0.5s;
-      background: #19625d; }
-
 .page-id-22 div.comment-metadata a {
   text-decoration: none;
   color: #248A83; }
@@ -1215,7 +1197,8 @@ cite.fn {
     text-shadow: none; }
     .form-submit input.submit:hover {
       transition: 0.5s;
-      background: #19625d; }
+      background: #19625d;
+      box-shadow: none; }
 
 div.comment-metadata a {
   text-decoration: none;
@@ -1942,6 +1925,11 @@ div.copyright p {
   font-size: 2.3rem;
   letter-spacing: 2px;
   line-height: 1.2; }
+
+.error-404 input, .no-results input {
+  background-color: rgba(150, 150, 150, 0.1);
+  border-radius: 0;
+  margin: 10px 0; }
 
 .widget_recent_entries h2,
 .widget_categories h2 {
