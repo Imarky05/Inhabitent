@@ -1,5 +1,7 @@
 # Inhabitent
 
+![alt text](./themes/inhabitent-theme/inahbitent-screenshot.png "Inhabitent")
+
 ## Description
 We learned how to use wordpress to build our website. Learned how to make our own custom style/theme to apply to our website. Learned how to use MAMP to have a local database that can host our website. Discovered how to use many different built in WP Functions to call in arrays that contains the posts or items that we need. This is also our first for a multipaged website.
 
